@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Jacqueline Mander</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="logowhitebg.png">
+	<script src="https://kit.fontawesome.com/e41db2f2f6.js" crossorigin="anonymous"></script>
+
+  </head>
+
+<body>
+
+  <header class="page-header header container-fluid">
+  <div class="overlay"></div>
+	<nav class="navbar navbar-expand-md fixed-top navbar-dark" >
+		<a class="navbar-brand" href="#">
+      <img id="img-fluid" src="logo.png" style="max-width: 75px">
+    </a>
+		<button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#main-navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="main-navigation">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="#about">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#projects">Portfolio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#technical">Technical</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+
+		<div class="description">
+			<h1>Jacqueline Mander</h1>
+			<p>Software Developer</p>
+			<a class="btn btn-outline-secondary btn-lg learnmore" href="#about">Learn More</a>
+		</div>
+  </header>
+
+  <section class="about" id="about">
+	<h1>About</h1>
+	  <div class="container">
+		  <div class=row>
+			<div class="col-lg-4 col-md-4 col-sm-12 profpic"> 
+				<img class="prof" src="prof.png" />
+			</div>
+			<div class="col-lg-8 col-md-8 col-sm-12">
+				<div class = intro>
+				<p>Hi there!<br> <br>Welcome to my website! Make yourself at home, click around, check out the source code and see some of my favourite projects.</p>
+				I'm a software engineer with a passion for building software with an injection of fun and creativity. I work with lots of different langauges but python remains my favourite!<br><br>
+				<p>If you want to chat about why python is the best thing ever or discuss a job opportunity, you can reach me through my <a href="linkedin.com/in/jacqueline-m-4452911a4">LinkedIn</a> or just <a href="mailto: mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer">email me directly</a>! </p>
+				</p>
+				<a href="linkedin.com/in/jacqueline-m-4452911a4" target=”_blank” ><i class="icon fab fa-linkedin "></i></a>
+				<a href="https://github.com/jmmander" target=”_blank” ><i class=" icon fab fa-github-square "></i></a>
+				<a href="mailto: mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer"><i class=" icon fas fa-envelope-square"></i></a>
+
+			</div>
+			</div>
+	  </div>
+	  </div>
+  </section >
+  <section class="projects" id="projects">
+  <h1>Portfolio</h1>
+	<div class="container features">
+		<div class="tags">
+			<p> <button class="btn filter" id="python" type="button" >Python </button> 
+				<button class="btn filter" id="java" >Java </button>
+				<button class="btn filter" id="js" >JavaScript </button>
+				<button class="btn filter" id="html" >HTML</button>
+				<button class="btn filter" id="css" >CSS</button>
+				<button class="btn filter" id="angular" >Angular </button>
+				<button class="btn filter" id="react" >React </button>
+				<button class="btn filter" id="api" >API</button>
+			</p>
+		</div>	
+		<div class="row">
+			<div class="d-flex col-lg-4 col-md-4 col-sm-12 imgdiv js css html react api mix">
+        		<img src="jammming.png" class="img-thumbnail" id="jammming.png" alt="A React powered app that connects to the Spotify API to provide users with a standalone platform to create new playlists and save them to their account.">
+      		</div>
+			<div class=" d-flex col-lg-4 col-md-4 col-sm-12 imgdiv js css html react api mix">
+        		<img src="ravenous.png" class="img-thumbnail" id="ravenous.png" alt="A React powered app that connects to the Yelp API that allows users to search for restaurants, sort results by rating, reviews and distance and provides dynamic links to Google Maps and the restaurant webpage ">
+      		</div>
+      		<div class="d-flex col-lg-4 col-md-4 col-sm-12 imgdiv js css html api mix">
+        		<img src="wanderlust.png" class="img-thumbnail" id="wanderlust.png" alt="A travel website that connects to the Open Weather API to provide current weather information and the Foursquare API to provide places of interest information for a given destination">
+	  		</div>
+
+			<div class="d-flex col-lg-4 col-md-4 col-sm-12 imgdiv js css html angular api mix">
+				<img src="webform.png" class="img-thumbnail" id="webform.png" alt="A jQuery and Angular powered smart webform with client and sever side validation, dynamic branching logic based on user repspone. Webform responses connect to the google sheets API and written to a google sheet where an email is automaticly sent to the submittter. ">
+      		</div>
+			<div class=" d-flex col-lg-4 col-md-4 col-sm-12 imgdiv java mix">
+        		<img src="shapePlayer.png" class="img-thumbnail" id="shapePlayer.mp4" alt="A java powerered application that allows users to write and play music using shapes. ">
+      		</div>
+      		<div class="d-flex col-lg-4 col-md-4 col-sm-12 imgdiv java api mix">
+				<img src="preview.png" class="img-thumbnail" id="preview.png" alt="A java powerered application that connects to the twitter API and maps a live randomized subset of tweets based on geographical location of users and keyword search. ">
+      		</div>
+
+			<div class="d-flex col-lg-4 col-md-4 col-sm-12 imgdiv python mix">
+				<img src="turtle.png" class="img-thumbnail" id="pythonTurtle.mp4" alt="A python powered program that uses turtle to recursivly draws trianges and create attractive patterns">
+      		</div>
+			<div class=" d-flex col-lg-4 col-md-4 col-sm-12 imgdiv python mix">
+        		<img src="dssScan.png" class="img-thumbnail" id="dssScan.png" alt="An open source python script run on Linux systems to scan for package dependencies as well as system requirements depending on user inputs prior to the installation of Dataiku Data Science Studio">
+      		</div>
+      		<div class="d-flex col-lg-4 col-md-4 col-sm-12 imgdiv python mix">
+        		<img src="sudoku.png" class="img-thumbnail" id="sudoku.png" alt="A python script that takes an unsolved sudoku puzzle from the user and solves it ">
+			</div>
+		</div>
+
+		<div id="myModal" class="modal center-block">
+		</div>
+	</div>
+</section>
+
+  <section class="technical" id="technical">
+	  <div class="container tech" id="tech">
+		<h1 >Technical</h1>
+		<div class="techcontent">
+		<p class="techintro">I have worked with a variety of programming languages, frameworks and software. My go-to language for fun projects and exploring new ideas is python, but when I need performance I use Java and when I want to make something pretty I turn to CSS and HTML. </p>
+		<div class="row tools">
+			<div class="d-flex col-lg-3 col-md-3 col-sm-3 justify-content-center skill ">
+				<p>Python</p>
+			</div>
+			<div class="d-flex col-lg-3 col-md-3 col-sm-3  justify-content-center skill ">
+				<p>Git</p>
+			</div>
+			<div class="d-flex col-lg-3 col-md-3 col-sm-3   justify-content-center skill">
+				<p>jQuery</p>
+			</div>
+			<div class="d-flex col-lg-3 col-md-3 col-sm-3 justify-content-center skill ">
+				<p>Linux</p>
+			</div>
+			<div class="d-flex col-lg-12 col-md-12 col-sm-12 tagline justify-content-center ">	
+				<p><strong> Frequently used tools</strong></p>
+			</div>
+			<div class="d-flex col-lg-3 col-md-3 col-sm-3 justify-content-center skill  ">
+				<p>SQL</p>
+			</div>
+			<div class="d-flex col-lg-3 col-md-3 col-sm-3 justify-content-center skill  ">
+				<p>Bootstrap</p>
+			</div>
+			<div class="d-flex col-lg-3 col-md-3 col-sm-3  justify-content-center skill ">
+				<p>DSS</p>
+			</div>
+			<div class="d-flex col-lg-3 col-md-3 col-sm-3 justify-content-center skill  ">
+				<p>Google apps</p>
+			</div>	
+		</div>
+		</div>
+	  </div>
+  </section>
+	
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-12">
+					<h6 class="font-weight-bold">Additional Information</h6>
+					<p>You can checkout all the source code for this website on <a href="https://github.com/jmmander/Portfolio" target=”_blank”>my Gitub here</a>. Should you happen to find some inspiration or come across some useful code snippets, you can say thanks with an <a href="linkedin.com/in/jacqueline-m-4452911a4" target=”_blank” >endorsement on my LinkedIn. </a></p>
+					<p>If you want to know more or get in touch for whatever reason you can <a href="mailto: mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer">email me here </a>or just shoot me a <a href="linkedin.com/in/jacqueline-m-4452911a4" target=”_blank”>message on LinkedIn </a></p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<h6 class=" font-weight-bold">Contact</h6>
+					<a href="linkedin.com/in/jacqueline-m-4452911a4" target=”_blank” ><i class="fab icon fa-linkedin "></i></a>
+					<a href="https://github.com/jmmander" target=”_blank” ><i class="fab icon fa-github-square "></i></a>
+					<a href="mailto: mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas icon fa-envelope-square"></i></a>
+				</div>
+			</div>
+		</div>
+		
+	</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
