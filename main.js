@@ -1,5 +1,4 @@
 
-//comment
 
 $(document).ready(function(){
     $('.header').height($(window).height());
@@ -17,7 +16,7 @@ $(".img-thumbnail").on("click", function(e) {
         $("#modalImg").attr("src", imgsrc);
         $('.figure-caption').text(caption);
         modal.style.display = "block";
-    }
+        }
     else {
         ($('#myModal').empty().append('<video class="modal-content figure-img " id="video" controls autoplay></video> <figcaption class="figure-caption"></figcaption>'));
         ($("#video").append('<source id="vidSource" src="" type="video/mp4" ></source>'))
@@ -64,20 +63,21 @@ else {
 console.log("%cHi there! Thanks for checking out my source code. Got questions? Suggestions? Comments? Let me know!", 'color:cyan ; fontsize:30px; line-height: 25px; text-align: center; font-weight: bold')
 
 
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("modal")[0];
 
-
-
-
-
-  
-  
-
-
-window.onclick = function() {
-    if (event.target == modal) {
-  modal.style.display = "none";
-
-    }
+// When the user clicks on span, close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
 }
+
+
+
+
+  
+  
+
+
+
 
 })

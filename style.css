@@ -87,7 +87,7 @@ body {
 /*--- about section ---*/
 
 .icon {
-  font-size: 1.8em;
+  font-size: 1.5em;
   color: white;
   padding: 3px;
 }
@@ -165,11 +165,6 @@ body {
     
 }
 
-.features .form-control,
-.features input {
-	border-radius: 0;
-}
-
 .features .filter {
 	background-color: #ffffff;
 	border: 1px solid #ffffff;
@@ -178,14 +173,22 @@ body {
 }
 
 .features .filter:hover {
-	opacity: 0.7;
-	border: 2px solid rgb(170, 200, 255);
+	opacity: 1;
+  border: 2px solid rgb(170, 200, 255);
+  background: rgb(234, 236, 193);
 }
 
 .filter {
   border-radius: 12px;
   margin:auto;
 }
+
+
+.features .form-control,
+.features input {
+	border-radius: 0;
+}
+
 
 .tags {
   margin-top: -3em;
@@ -203,8 +206,10 @@ body {
   cursor: pointer;
   transition: 0.3s;
   margin: 2%;
-  background: white;
+  background: transparent;
   margin-bottom: 2em;
+  background-color: white;
+  opacity: 0.6;
 }
 
 .imgdiv{
@@ -212,11 +217,13 @@ body {
   height:18em;
   width: 24em;
   background: transparent;
+  position: relative;
+
 
 }
 
 .img-thumbnail:hover, .vid-thumbnail:hover{
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .modal {
@@ -244,13 +251,14 @@ body {
 .modal-content {
   margin: auto;
   display: block;
-  width: 100%;
-  max-width: 75%;
   max-height: 75%;
+  
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  object-fit: contain;
+  background: none;
 }
 
 
@@ -300,16 +308,18 @@ body {
   text-align: center;
   display: relative;
   color: rgb(234, 236, 193);
+  
 }
 
 
 .skill p {
-  display: inline-block
+  display: inline-block;
+  size: 2em;
 }
 
 .tagline {
   padding:1em;
-  font-size: 1.5em;
+
 }
 
 .tools {
