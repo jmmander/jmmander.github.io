@@ -332,7 +332,7 @@ body {
 /*--- footer ---*/
 
 .page-footer {
-	background-color: #222;
+	background-color: rgb(12, 12, 12);
 	color: #ccc;
 	padding: 60px 0 30px;
 }
