@@ -79,10 +79,11 @@ body {
 	color: rgb(0, 0, 0);
 }
 
-.description a:hover {
-	border: 1px solid #fff;
-	background: #fff;
-	color: #000;
+
+.learnmore:hover {
+  border: 1px solid #fff;
+	background: rgb(235, 235, 193);
+  color: #000;  
 }
 
 /*--- about section ---*/
@@ -310,6 +311,7 @@ body {
   text-align: center;
   display: relative;
   color: rgb(164, 166, 255);
+  size: 1.8em;
   
 }
 
