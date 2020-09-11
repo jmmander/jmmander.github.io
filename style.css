@@ -350,15 +350,8 @@ body {
 @media (max-width: 575.98px) {
 
 	.description {
-    left: 50%;
-    transform: translate(-50%, -50%);
-		padding: 0 15px;
-		position: absolute;
-		top: 45%;
-		transform: none;
     text-align: center;
     max-width: 100%;
-    overflow-x: hidden;
 	}
 	
 	.description h1 {
