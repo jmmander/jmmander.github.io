@@ -330,6 +330,10 @@ body {
   padding:2em 0 8em 0; 
 }
 
+.tagline {
+  size: 1.25em;
+}
+
 
 /*--- footer ---*/
 
