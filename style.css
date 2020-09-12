@@ -318,7 +318,6 @@ body {
 
 .skill p {
   display: inline-block;
-  size: 2em;
 }
 
 .tagline {
@@ -330,8 +329,8 @@ body {
   padding:2em 0 8em 0; 
 }
 
-.tagline {
-  size: 1.25em;
+.techsubheading {
+  font-size: 1.3em;
 }
 
 
