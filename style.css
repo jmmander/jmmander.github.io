@@ -342,12 +342,13 @@ body {
 
 .page-footer {
 	background-color: rgb(12, 12, 12);
-	color: #ccc;
+	color: #ccc !important;
 	padding: 60px 0 30px;
 }
 .additional a{
  color: rgb(234, 236, 193);
 }
+
 
 .contact a:hover{
   color: rgb(234, 236, 193);
