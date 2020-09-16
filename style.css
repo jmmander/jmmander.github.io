@@ -345,8 +345,12 @@ body {
 	color: #ccc;
 	padding: 60px 0 30px;
 }
-.page-footer a{
+.additional a{
  color: rgb(234, 236, 193);
+}
+
+.contact a:hover{
+  color: rgb(234, 236, 193);
 }
 
 .footer-copyright {
