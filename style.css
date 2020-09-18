@@ -314,7 +314,7 @@ body {
 .skill {
   text-align: center;
   display: relative;
-  color: rgb(164, 166, 255);
+  color:#8adce3;
   font-size: 1.5em;
   
 }
@@ -352,6 +352,10 @@ body {
 
 .contact a:hover{
   color: rgb(234, 236, 193);
+}
+
+.contact a {
+  color: white !important;
 }
 
 .footer-copyright {
