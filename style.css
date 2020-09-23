@@ -407,6 +407,18 @@ body {
       max-width: 95%;
     }
 
+    .img-thumbnail, .vid-thumbnail{
+      opacity: 1;
+    }
+
+    .intro {
+      max-width: 150%;
+      text-align: center;
+    }
+
+
+
+
   }
 
  
