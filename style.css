@@ -414,6 +414,7 @@ body {
     .intro {
       max-width: 150%;
       text-align: center;
+      margin-left:0;
     }
 
 
