@@ -7,7 +7,14 @@ body {
 
 /*--- navigation bar ---*/
 
-
+.icon {
+  font-size: 1.5em;
+  color: white;
+  padding: 3px;
+}
+.icon:hover {
+  color: rgb(235, 235, 193);
+}
 
 .nav-link,
 .navbar-brand {
@@ -92,14 +99,7 @@ body {
 
 /*--- about section ---*/
 
-.icon {
-  font-size: 1.5em;
-  color: white;
-  padding: 3px;
-}
-.icon:hover {
-  color: rgb(235, 235, 193);
-}
+
 
 .intro {
   max-width: 150%;
@@ -417,7 +417,11 @@ body {
       margin-left:0;
     }
 
-
+    .profpic {
+      margin-left: -4%;
+      padding-bottom: 10%;
+    
+    }
 
 
   }
