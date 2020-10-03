@@ -33,7 +33,7 @@ body {
 }
 
 .nav-link:hover {
-	color: #000;
+	color: #000 !important; 
 }
 
 .navbar-collapse {
@@ -476,6 +476,7 @@ body {
       max-width: 150%;
       text-align: center;
       margin-left:0;
+      
     }
 
     .profpic {
