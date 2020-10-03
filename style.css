@@ -391,8 +391,8 @@ body {
 .additional a{
   color:rgb(5, 116, 106);
 }
-.pagefooter h6 {
-  color:
+.page-footer h6 {
+  color:rgb(45, 45, 45);
 }
 
 .page-footer a:hover{
@@ -427,7 +427,23 @@ body {
 	
 	.features {
 		margin: 0;
-	}
+  }
+  .introtext {
+    margin-left: 0em;
+    margin-top: 0em;
+   }
+   .row {display: block;
+   }
+
+   .prof{
+    margin-left: 10%;
+    margin-top:-20%;
+    margin-bottom:-20%;
+   }
+   .about h1 {
+    padding-bottom: 0;
+ }
+
 
 }
 
@@ -464,14 +480,27 @@ body {
 
     .profpic {
       margin-left: 0;
-      padding-bottom: 10%;
+      padding-bottom: 5%;
     
     }
+
     .introtext {
       margin-left: 0em;
       margin-top: 0em;
      }
 
+     .row {display: block;
+     }
+
+     .prof{
+      margin-left: 10%;
+      margin-top:-20%;
+      margin-bottom:-20%;
+     }
+     
+     .about h1 {
+       padding-bottom: 0;
+    }
 
 
 
