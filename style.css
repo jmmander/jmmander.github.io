@@ -1,7 +1,7 @@
 body {
 	padding: 0;
   margin: 0;
-  background: rgb(2, 4, 15);
+  background:  rgba(207, 207, 207, 0.7);
   max-width: 100vw;
 }
 
@@ -9,11 +9,11 @@ body {
 
 .icon {
   font-size: 1.5em;
-  color: white;
+  color: rgb(78,78,78);
   padding: 3px;
 }
 .icon:hover {
-  color: rgb(235, 235, 193);
+  color: rgb(0, 0, 0);
 }
 
 .nav-link,
@@ -27,7 +27,9 @@ body {
 }
 
 .nav-link {
-	margin-right: 1em !important;
+  margin-right: 1em !important;
+  color: rgb(110, 110, 110) !important;
+  font-weight: bold;
 }
 
 .nav-link:hover {
@@ -50,7 +52,7 @@ body {
 /*--- header ---*/
 
 .header {
-	background-image: url('background.png');
+	background-image: url('background.jpg');
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -62,7 +64,7 @@ body {
 	min-width: 100%;
 	left: 0;
 	top: 0;
-	background: rgba(11, 11, 24, 0.5);
+	background: rgba(11, 11, 24, 0.1);
 }
 
 .description {
@@ -74,11 +76,11 @@ body {
 }
 
 .description h1 {
-	color: rgb(255, 255, 255);
+	color: rgb(45, 45, 45);
 }
 
 .description p {
-	color: #fff;
+	color: rgb(78, 78, 78);
 	font-size: 1.3rem;
 	line-height: 1.5;
 }
@@ -90,61 +92,91 @@ body {
 	color: rgb(0, 0, 0);
 }
 
-
+.learnmore{
+  color: rgb(78, 78, 78);
+}
 .learnmore:hover {
   border: 1px solid #fff;
-	background: rgb(235, 235, 193);
-  color: #000;  
+  color: rgb(45, 45, 45);  
+  font-weight: bold;
+  background-color: white;
 }
 
 /*--- about section ---*/
+.shared1 {
+  background:linear-gradient(0deg, rgba(207, 207, 207, 0.8), rgba(207, 207, 207, 0.8)), url('background5.jpg'); /*url('background1.jpg')*/
+  background-size: cover;
+	background-position: center;
+	position: relative;
+}
 
+.introcontainer {
+  flex-wrap: nowrap;
+  margin-bottom: -2em;
+}
 
-
-.intro {
-  max-width: 150%;
-  margin-left:4em;
+.introtext {
+ margin-left: 2em;
+ margin-top: 2em;
 }
 
 .about {
-  background: #000006;
-  color: rgb(196, 203, 218)
+  font-weight: bold;
+  
+  color: rgb(55, 71, 68);
+  
 }
 
 .about h1  {
   position: relative;
   z-index: 1;
-  color: rgb(255, 255, 255);
+  color: rgb(45, 45, 45);
   text-align: center;
   padding-top: 2em;
   padding-bottom: 1em;
   }
 
+.intro{
+  font-size: 1.2em;
+}
+
 .intro a {
-  color:rgb(235, 235, 193);
+  color:rgb(5, 116, 106);
 
   }
 
+.intro a:hover {
+    color:rgb(3, 61, 57);
+  
+    }
+
 .profpic {
-  margin-left: -10%;
-  padding-bottom: 10%;
+  display: flex;
+  flex-wrap: row;
+  max-height: 80%;
 
 }
 
 .prof {
   position:relative;
-  max-width: 150%;
+  max-width: 80%;
   object-fit: contain;
   height: 80%;
+  margin-top: -1em;
 }
 /*--- projects section ---*/
 
 .projects {
-  background-color: rgb(2, 4, 15);
+  border-top: 1px solid rgba(132, 148, 140, 0.7);
+  /*background:linear-gradient(0deg, rgba(207, 207, 207, 0.8), rgba(207, 207, 207, 0.8)), url("background5.jpg");
+  background-size: cover;
+	background-position: left;
+  position: relative;*/
+  padding-bottom: 1.5em;
 }
 
 .projects h1  {
-  color: white;
+  color: rgb(45, 45, 45);
   text-align: center;
   padding-top: 2em;
   padding-bottom: 1em;
@@ -181,8 +213,8 @@ body {
 
 .features .filter:hover {
 	opacity: 1;
-  border: 2px solid rgb(170, 200, 255);
-  background: rgb(234, 236, 193);
+  border: 2px solid rgb(255, 255, 255);
+  font-weight: bold;
 }
 
 .filter {
@@ -216,7 +248,7 @@ body {
   background: transparent;
   margin-bottom: 2em;
   background-color: white;
-  opacity: 0.7;
+  opacity: 0.71;
 }
 
 .imgdiv{
@@ -231,6 +263,7 @@ body {
 
 .img-thumbnail:hover, .vid-thumbnail:hover{
   opacity: 1;
+  border: 4px solid rgb(255, 255, 255);
 }
 
 .modal {
@@ -285,8 +318,11 @@ body {
 
 /*--- tech ---*/
 
-.technical {
-    background: rgb(3, 10, 10);
+.shared {
+  background:linear-gradient(0deg, rgba(207, 207, 207, 0.8), rgba(207, 207, 207, 0.8)), url('background4.jpg');/*url('background4.jpg')*/
+  background-size: cover;
+	background-position: left;
+  position: relative;
 }
 
 .tech {
@@ -295,26 +331,28 @@ body {
 
 .tech h1{
   padding-bottom: 1em;
-  color: white;
+  color: rgb(45, 45, 45);
   text-align: center;
   padding-top: 2em;
 
 }
 
 .techcontent {
-  color: rgb(196, 203, 218);
+  color: rgb(55, 71, 68);
+  font-weight: bold;
 
 
 }
 
 .techintro {
   padding-bottom: 2em;
+  font-size: 1.1em;
 }
 
 .skill {
   text-align: center;
   display: relative;
-  color:#8adce3;
+  color:rgb(95, 111, 124);
   font-size: 1.5em;
   
 }
@@ -341,21 +379,28 @@ body {
 /*--- footer ---*/
 
 .page-footer {
-	background-color: rgb(12, 12, 12);
-	color: #ccc !important;
-	padding: 60px 0 30px;
+  border-top: 1px solid rgba(132, 148, 140, 0.7);
+  /*background:linear-gradient(0deg, rgba(207, 207, 207, 0.8), rgba(207, 207, 207, 0.8)), url('background6.jpg');
+  background-size: cover;
+	background-position: right;
+  position: relative;*/
+	color:  rgb(55, 71, 68) !important;
+  padding: 60px 0 30px;
+  font-weight: bold;
 }
 .additional a{
- color: rgb(234, 236, 193);
+  color:rgb(5, 116, 106);
+}
+.pagefooter h6 {
+  color:
 }
 
-
-.contact a:hover{
-  color: rgb(234, 236, 193);
+.page-footer a:hover{
+  color:rgb(3, 61, 57);
 }
 
 .contact a {
-  color: white !important;
+  color: rgb(5, 116, 106); !important;
 }
 
 .footer-copyright {
@@ -422,6 +467,8 @@ body {
       padding-bottom: 10%;
     
     }
+
+
 
 
   }
