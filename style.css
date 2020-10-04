@@ -444,6 +444,10 @@ body {
     padding-bottom: 0;
  }
 
+ .projects {
+  padding-top: -2em;
+}
+
 
 }
 
@@ -503,7 +507,9 @@ body {
        padding-bottom: 0;
     }
 
-
+    .projects {
+      padding-top: -2em;
+    }
 
   }
 
