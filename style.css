@@ -28,7 +28,7 @@ body {
 
 .nav-link {
   margin-right: 1em !important;
-  color: rgb(110, 110, 110) !important;
+  color: rgb(51, 51, 51) !important;
   font-weight: bold;
 }
 
@@ -219,7 +219,7 @@ body {
 
 .filter {
   border-radius: 12px;
-  margin:auto;
+  margin:2px;
 }
 
 
