@@ -19,7 +19,7 @@ $(".img-thumbnail").on("click", function(e) {
         modal.style.display = "block";
         }
     else {
-        ($('#myModal').empty().append('<video class="modal-content figure-img " id="video"></video> <figcaption class="figure-caption"></figcaption>'));
+        ($('#myModal').empty().append('<video class="modal-content figure-img " id="video" controls></video> <figcaption class="figure-caption"></figcaption>'));
         ($("#video").append('<source id="vidSource" src="" type="video/mp4" ></source>'))
         $("#vidSource").attr("src", imgsrc)
         const caption =  $(this).attr("alt");
