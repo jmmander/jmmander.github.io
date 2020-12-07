@@ -62,6 +62,67 @@ else {
 )}
 })
 
+//removes animated class after play
+$(".progress-bar").on("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
+  $(this).removeClass(function(index, className) {
+    return (className.match (/(^|\s)animated\S+/g) || []).join(' ');
+  });  
+});
+
+//progress bar plays animation on hover 
+$(".progress-bar").hover(function(){
+  var classes = ($(this).attr("class").split(/\s+/));
+  if (classes.includes('level5'))
+{
+  $(this).addClass("animated5");        
+}
+if (classes.includes('level4'))
+{
+  $(this).addClass("animated4");  
+}
+if (classes.includes('level3'))
+{
+  $(this).addClass("animated3");  
+}
+if (classes.includes('level2'))
+{
+  $(this).addClass("animated2");  
+}
+if (classes.includes('level1'))
+{
+  $(this).addClass("animated1");  
+}}
+);
+
+//progressbar plays on scroll
+$('.progress-bar').waypoint(function() {
+let progressBars = $('.progress-bar')
+progressBars.each(function() {
+  let classes = ($(this).attr("class").split(/\s+/));
+  if (classes.includes('level5'))
+  {
+    $(this).addClass("animated5");        
+  }
+  if (classes.includes('level4'))
+  {
+    $(this).addClass("animated4");  
+  }
+  if (classes.includes('level3'))
+  {
+    $(this).addClass("animated3");  
+  }
+  if (classes.includes('level2'))
+  {
+    $(this).addClass("animated2");  
+  }
+  if (classes.includes('level1'))
+  {
+    $(this).addClass("animated1");  
+  }
+});
+}, { offset: '100%' });
+
+
 //send user a message in console
 console.log("%cHi there! Thanks for checking out my source code. Got questions? Suggestions? Comments? Let me know!", 'color:cyan ; fontsize:30px; line-height: 25px; text-align: center; font-weight: bold')
 

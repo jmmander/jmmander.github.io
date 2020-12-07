@@ -7,6 +7,9 @@ body {
   margin: 0;
   background:  rgba(207, 207, 207, 0.7);
   max-width: 100vw;
+  font-family: 'lato',sans-serif;
+  font-weight: 300;
+  color: rgb(255, 255, 255); 
 }
 
 hr {
@@ -15,35 +18,70 @@ hr {
   border-width: 3px;
 }
 
-/*--- navigation bar ---*/
+.heading {
+  position: relative;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  letter-spacing: 10px;
+  font-size: max(4vw,2em);
+  font-weight: 500;
+  }
+
+.links{
+  color:rgb(188, 245, 255);
+}
+
+.links:hover {
+    color:rgb(4, 216, 253);
+  
+}
 
 .icon {
   font-size: 1.5em;
-  color: rgb(78,78,78);
+  color: rgb(255, 255, 255);
   padding: 3px;
 }
 .icon:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(189, 245, 255);
 }
 
+canvas {
+  z-index: -1;
+}
+
+/*--- navigation bar ---*/
+
+
+.navbar {
+  background-color: rgba(248, 244, 255, 1);
+  height: 4.2em;
+}
 .nav-link,
-.navbar-brand {
-    color: rgb(0,0,0);
+.navbar-title {
+    color: rgb(54, 54, 54) ;
     cursor: pointer;
     display: inline-block; 
-    max-width: 75px; 
-    max-height: 45px;
-    
+    font-weight: bold;
+}
+.navbar-title {
+  text-align: center;
+  vertical-align: center;
+  margin-left: 2em;
 }
 
 .nav-link {
-  margin-right: 1em !important;
-  color: rgb(51, 51, 51) !important;
-  font-weight: bold;
+  margin-right: 2em !important;
+  color: rgb(54, 54, 54) !important;
+
+
 }
 
 .nav-link:hover {
-	color: #000 !important; 
+  color: black !important; 
+  
 }
 
 .navbar-collapse {
@@ -59,12 +97,10 @@ hr {
   text-align: right;
 }
 
+
 /*--- header ---*/
 
 .header {
-	background-image: url('./resources/background.jpg');
-	background-size: cover;
-	background-position: center;
 	position: relative;
 }
 
@@ -74,59 +110,82 @@ hr {
 	min-width: 100%;
 	left: 0;
 	top: 0;
-	background: rgba(11, 11, 24, 0.1);
+	background: transparent;
 }
 
 .description {
 	left: 50%;
 	position: absolute;
-	top: 45%;
+	top: 50%;
 	transform: translate(-50%, -55%);
-	text-align: center;
+  text-align: center;
+  background:	transparent;
+  padding: 2.2%;
+  width: 70%;
+  font-weight: 300;
+}
+
+.landingtext {
+  animation: fadeIn 3s forwards; 
+  opacity: 0;
 }
 
 .description h1 {
-	color: rgb(45, 45, 45);
+  color: rgb(245, 245, 245);
+  font-size: max(5vw, 3em);
+  letter-spacing: 10px;
+  
+  
 }
 
 .description p {
-	color: rgb(78, 78, 78);
-	font-size: 1.3rem;
-	line-height: 1.5;
+	color: rgb(237, 239, 252);
+	font-size: max(2.5vw, 1.5em);
+  line-height: 1.5;
+  letter-spacing: 10px;
+  
 }
 
-.description a {
-	border: 1px solid #ffffff;
-	background: #ffffff;
-	border-radius: 0;
-	color: rgb(0, 0, 0);
-}
 
 .learnmore{
-  color: rgb(78, 78, 78);
+  color: white;
+  background-color: transparent;
+  border-radius: 5px;	
+  border: 1px solid #ffffff;
+  transition: all 0.2s;
+  font-weight:300;
+ 
+
 }
 .learnmore:hover {
   border: 1px solid #fff;
   color: rgb(45, 45, 45);  
-  font-weight: bold;
   background-color: white;
 }
 
-.line {
-  width: 
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+  
+#second {
+  animation-delay: 1s;
 }
 
-/*--- about section ---*/
-.shared1 {
-  background:linear-gradient(0deg, rgba(207, 207, 207, 0.8), rgba(207, 207, 207, 0.8)), url('./resources/background7.png'); 
-  background-size: cover;
-	background-position: center;
-	position: relative;
+#third {
+  animation-delay: 2s;
 }
+
+
+/*--- about section ---*/
+
+
 
 .introcontainer {
   flex-wrap: nowrap;
   display: inline-flex;
+  z-index: 1;
 }
 
 .introtext {
@@ -135,40 +194,14 @@ hr {
 }
 
 .about {
-  font-weight: bold;
   margin-bottom: 5em;
-  color: rgb(55, 71, 68);
   
 }
-
-.about h1  {
-  position: relative;
-  z-index: 1;
-  color: rgb(45, 45, 45);
-  text-align: center;
-  padding-top: 2em;
-  padding-bottom: 1em;
-  }
-
-.intro{
-  font-size: 1.2em;
-}
-
-.intro a {
-  color:rgb(5, 116, 106);
-
-  }
-
-.intro a:hover {
-    color:rgb(3, 61, 57);
-  
-    }
 
 .profpic {
   display: flex;
   flex-wrap: row;
   max-height: 80%;
-
 }
 
 .prof {
@@ -219,16 +252,19 @@ hr {
 }
 
 .features .filter {
-	background-color: #ffffff;
-	border: 1px solid #ffffff;
-	color: rgb(0, 0, 0);
-	margin-top: 20px;
+  color: white;
+  background-color: transparent;
+  border-radius: 5px;	
+  border: 1px solid #ffffff;
+  transition: all 0.2s;
+  font-weight:300;
+	
 }
 
 .features .filter:hover {
-	opacity: 1;
-  border: 2px solid rgb(255, 255, 255);
-  font-weight: bold;
+  border: 1px solid #fff;
+  color: rgb(45, 45, 45);  
+  background-color: white;
 }
 
 .filter {
@@ -332,65 +368,140 @@ hr {
 
 /*--- tech ---*/
 
-.shared {
-  background:linear-gradient(0deg, rgba(207, 207, 207, 0.8), rgba(207, 207, 207, 0.8)), url('./resources/background4.jpg');/*url('background4.jpg')*/
-  background-size: cover;
-	background-position: left;
-  position: relative;
-}
-
-
-
 .tech {
   max-width: 75%;
-}
-
-.tech h1{
-  padding-bottom: 1em;
-  color: rgb(45, 45, 45);
-  text-align: center;
-  padding-top: 2em;
-
-}
-
-.techcontent {
-  color: rgb(55, 71, 68);
-  font-weight: bold;
-
-
-}
-
-.techintro {
-  padding-bottom: 2em;
-  font-size: 1.1em;
-}
-
-.skill {
-  text-align: center;
-  display: relative;
-  color:rgb(95, 111, 124);
-  font-size: 1.5em;
   
 }
 
-
-.skill p {
-  display: inline-block;
+.progressbar-title{
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #ffffff;
+  margin-top: 0;
+  padding-right: 1em;
+  margin-bottom: 20px;
 }
 
-.tagline {
-  padding:1em;
+.progress{
+  height: 2.5em;
+  background-color: rgba(223, 229, 238, 0.1);
+  margin-bottom: 20px;
+  box-shadow: none;
+  border-radius: 0;
+  width: 90%;
+}
+
+.progress .progress-bar{
+  position: relative;
+  box-shadow: none;
+  background-color: rgb(230, 234, 240);
+ 
+  
+}
+
+.progress-bar.animated5 {
+  -moz-animation: fillBar5 2s;
+  -webkit-animation: fillBar5 2s;
+  animation: fillBar5 2s;
 
 }
 
-.tools {
-  padding:2em 0 8em 0; 
+.progress-bar.animated4 {
+  -moz-animation: fillBar4 2s;
+  -webkit-animation: fillBar4 2s;
+  animation: fillBar4 2s;
+
 }
 
-.techsubheading {
-  font-size: 1.3em;
-  text-align: center;
+.progress-bar.animated3 {
+  -moz-animation: fillBar3 2s;
+  -webkit-animation: fillBar3 2s;
+  animation: fillBar3 2s;
+
 }
+.progress-bar.animated2 {
+  -moz-animation: fillBar2 2s;
+  -webkit-animation: fillBar2 2s;
+  animation: fillBar2 2s;
+
+}
+
+.progress-bar.animated1 {
+  -moz-animation: fillBar1 2s;
+  -webkit-animation: fillBar1 2s;
+  animation: fillBar1 2s;
+
+}
+
+.progress .progress-value{
+  font-size: 15px;
+  font-weight: 700;
+  color: rgb(34, 34, 37);
+  position: absolute;
+  left: 10px;
+  z-index: 1;
+  letter-spacing: 3px;
+
+}
+
+
+
+@keyframes fillBar1 {
+  from {width: 0%;}
+  to {width: 50%}
+}
+
+@keyframes fillBar2 {
+  from {width: 0%;}
+  to {width: 60%}
+}
+@keyframes fillBar3 {
+  from {width: 0%;}
+  to {width: 70%}
+}
+
+@keyframes fillBar4 {
+  from {width: 0%;}
+  to {width: 80%}
+}
+
+@keyframes fillBar5 {
+  from {width: 0%;}
+  to {width: 90%}
+}
+
+.level1 {
+  width: 50%;
+}
+
+.level2 {
+  width: 60%;
+}
+
+.level3 {
+  width: 70%;
+}
+
+.level4 {
+  width: 80%;
+}
+
+.level5 {
+  width: 90%;
+}
+
+.techHeading {
+  margin: 0 auto 0 auto;
+  color: rgb(255, 255, 255);
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  letter-spacing: 3px;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+
+
 
 
 /*--- footer ---*/
@@ -401,27 +512,27 @@ hr {
   background-size: cover;
 	background-position: right;
   position: relative;*/
-	color:  rgb(55, 71, 68) !important;
+	color:  rgb(216, 218, 217);
   padding: 60px 0 30px;
-  font-weight: bold;
+  font-weight: 300;
 }
 .additional a{
-  color:rgb(5, 116, 106);
+  color:rgb(179, 231, 255);
 }
 .page-footer h6 {
-  color:rgb(45, 45, 45);
+  color:rgb(255, 255, 255);
 }
 
 .page-footer a:hover{
-  color:rgb(3, 61, 57);
+  color:rgb(160, 228, 248);
 }
 
 .contact a {
-  color: rgb(5, 116, 106) !important;
+  color: rgb(160, 228, 248);
 }
 
 .footer-copyright {
-	color: rgb(37, 37, 37);
+	color: rgb(255, 255, 255);
 	padding: 40px 0;
 }
 
