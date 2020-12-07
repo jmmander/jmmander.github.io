@@ -526,7 +526,12 @@ canvas {
 .page-footer a:hover{
   color:rgb(160, 228, 248);
 }
-
+.contact{
+  display: inline-block;
+  float: right;
+  text-align: left;
+  
+}
 .contact a {
   color: rgb(160, 228, 248);
 }
