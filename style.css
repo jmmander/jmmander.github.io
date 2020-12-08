@@ -134,7 +134,7 @@ canvas {
 }
 
 .description h1 {
-  color: rgb(245, 245, 245);
+  color: rgb(255, 255, 255);
   font-size: max(5vw, 3em);
   letter-spacing: 10px;
   
@@ -194,6 +194,7 @@ canvas {
 .introtext {
  margin-left: 2em;
  margin-top: 0em;
+ font-size: 1.3em;
 }
 
 .about {
@@ -373,6 +374,7 @@ canvas {
 
 .tech {
   max-width: 75%;
+  padding-bottom: 6em;
   
 }
 
@@ -386,8 +388,8 @@ canvas {
 }
 
 .progress{
-  height: 2.5em;
-  background-color: rgba(223, 229, 238, 0.1);
+  height: 2.3em;
+  background-color: rgba(223, 229, 238, 0.15);
   margin-bottom: 20px;
   box-shadow: none;
   border-radius: 0;
@@ -451,16 +453,16 @@ canvas {
 
 @keyframes fillBar1 {
   from {width: 0%;}
-  to {width: 50%}
+  to {width: 43%}
 }
 
 @keyframes fillBar2 {
   from {width: 0%;}
-  to {width: 60%}
+  to {width: 55%}
 }
 @keyframes fillBar3 {
   from {width: 0%;}
-  to {width: 70%}
+  to {width: 68%}
 }
 
 @keyframes fillBar4 {
@@ -470,19 +472,19 @@ canvas {
 
 @keyframes fillBar5 {
   from {width: 0%;}
-  to {width: 90%}
+  to {width: 92%}
 }
 
 .level1 {
-  width: 50%;
+  width: 43%;
 }
 
 .level2 {
-  width: 60%;
+  width: 55%;
 }
 
 .level3 {
-  width: 70%;
+  width: 68%;
 }
 
 .level4 {
@@ -490,7 +492,7 @@ canvas {
 }
 
 .level5 {
-  width: 90%;
+  width: 92%;
 }
 
 .techHeading {

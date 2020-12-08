@@ -94,7 +94,7 @@ if (classes.includes('level1'))
 }}
 );
 
-//progressbar plays on scroll
+//progressbar plays on first view
 var played = false;
 
 $('.progress-bar').waypoint(function() {
@@ -139,6 +139,11 @@ var span = document.getElementsByClassName("modal")[0];
 span.onclick = function() { 
     modal.style.display = "none";
 }
+
+$('img').each( function() {
+  var o = $(this);
+  if( ! o.attr('title') && o.attr('alt') ) o.attr('title', o.attr('alt') );
+});
 
 
 
