@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
     $('.header').height($(window).height());
-    //$('body').css( "maxWidth", ( $( window ).width())) 
+    //$('.about').height($(window).height());
     //$('.projects').height($(window).height());
 
 
