@@ -95,8 +95,11 @@ if (classes.includes('level1'))
 );
 
 //progressbar plays on scroll
+var played = false;
+
 $('.progress-bar').waypoint(function() {
-let progressBars = $('.progress-bar')
+if (!played)
+{let progressBars = $('.progress-bar')
 progressBars.each(function() {
   let classes = ($(this).attr("class").split(/\s+/));
   if (classes.includes('level5'))
@@ -120,7 +123,9 @@ progressBars.each(function() {
     $(this).addClass("animated1");  
   }
 });
-}, { offset: '100%' });
+played = true;
+}}, { offset: '100%' });
+
 
 
 //send user a message in console
