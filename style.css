@@ -75,6 +75,7 @@ canvas {
 .nav-link {
   margin-right: 2em !important;
   color: rgb(54, 54, 54) !important;
+  
 
 
 }
@@ -85,7 +86,9 @@ canvas {
 }
 
 .navbar-collapse {
-	justify-content: flex-end;
+  justify-content: flex-end;
+  background-color:  rgba(248, 244, 255, 1);
+  width: 30%;
 }
 
 .img-fluid {
