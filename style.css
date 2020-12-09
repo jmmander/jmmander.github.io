@@ -65,6 +65,7 @@ canvas {
 
 .text {
   color: aliceblue;
+  font-size: 1.15em;
 }
 
 /*--- navigation bar ---*/
@@ -211,8 +212,9 @@ canvas {
 }
 
 .introtext {
- font-size: 1.15em;
- padding-top: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -222,6 +224,12 @@ canvas {
   object-fit: contain;
   max-height: 80%;
   
+}
+
+.profpic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /*--- projects section ---*/
 
@@ -500,37 +508,35 @@ canvas {
 }
 
 
+/*--- code & contact ---*/
 
+.contact{
+
+  float: right;
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: 500;
+  
+}
+
+.cc {
+  padding-right: 4em;
+}
 
 
 /*--- footer ---*/
 
-.page-footer {
-  /*border-top: 1px solid rgba(132, 148, 140, 0.7);
-  background:linear-gradient(0deg, rgba(207, 207, 207, 0.8), rgba(207, 207, 207, 0.8)), url('background6.jpg');
-  background-size: cover;
-	background-position: right;
-  position: relative;*/
-	color:  rgb(216, 218, 217);
-  padding: 60px 0 30px;
+footer {
+	color:  rgb(163, 163, 163);
   font-weight: 300;
+  margin-left: 2em;
+  font-size: 0.8em;
+
 }
 
-.page-footer h6 {
-  color:rgb(255, 255, 255);
-}
 
-.contact{
-  display: inline-block;
-  float: right;
-  text-align: left;
-  
-}
 
-.footer-copyright {
-	color: rgb(255, 255, 255);
-	padding: 40px 0;
-}
+
 
 /*--- media queries ---*/
 
@@ -556,7 +562,10 @@ canvas {
 .introcontainer{
   display: block;
 }
-
+.prof {
+  max-width: 80%;
+  padding-bottom: 2em;
+}
 
 .techHeading {
    display: none;
