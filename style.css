@@ -92,10 +92,10 @@ canvas {
 .nav-link {
   margin-right: 2em !important;
   color: rgb(54, 54, 54) !important;
+}
 
-  
-
-
+.navbar-toggler {
+ color: rgb(54, 54, 54) !important;
 }
 
 .nav-link:hover {
@@ -161,7 +161,7 @@ canvas {
 
 .description p {
 	color: rgb(237, 239, 252);
-	font-size: max(2.5vw, 1.5em);
+	font-size: max(1vw, 1.5em);
   line-height: 1.5;
   letter-spacing: 10px;
   
@@ -175,7 +175,7 @@ canvas {
   border: 1px solid #ffffff;
   transition: all 0.2s;
   font-weight:300;
- 
+  font-size: max(1vw,1em);
 
 }
 .learnmore:hover {
@@ -207,17 +207,14 @@ canvas {
   flex-wrap: nowrap;
   display: inline-flex;
   z-index: 1;
-  margin-bottom: -4em;
   
 }
 
 .introtext {
  font-size: 1.15em;
+ padding-top: 1.5em;
 }
 
-
-.profpic {
-}
 
 .prof {
   position:relative;
@@ -537,7 +534,7 @@ canvas {
 
 /*--- media queries ---*/
 
-@media (max-width: 575.98px) {
+@media (max-width: 767px) {
 
 	.description {
     text-align: center;
@@ -555,20 +552,11 @@ canvas {
 	.features {
 		margin: 0;
   }
-  .introtext {
-    margin-left: 0em;
-    margin-top: 0em;
-   }
-   .row {display: block;
-   }
 
-   .about h1 {
-    padding-bottom: 0;
- }
-
- .projects {
-  padding-top: -2em;
+.introcontainer{
+  display: block;
 }
+
 
 .techHeading {
    display: none;
@@ -587,50 +575,6 @@ canvas {
   }
   
   
-  
-  @media only screen and (max-width: 767px) {
-    .modal-content {
-      max-width: 95%;
-    }
-
-    .img-thumbnail, .vid-thumbnail{
-      opacity: 1;
-    }
-
-    .intro {
-      max-width: 150%;
-      text-align: center;
-      margin-left:0;
-      
-    }
-
-    .techHeading {
-      display: none;
-    }
-
-
-    .profpic {
-      margin-left: 0;
-      padding-bottom: 5%;
-    
-    }
-
-    .introtext {
-      margin-left: 0em;
-      margin-top: 0em;
-     }
-
-     .row {display: block;
-     }
-     
-     .about h1 {
-       padding-bottom: 0;
-    }
-
-    .projects {
-      padding-top: -2em;
-    }
-
-  }
+}
 
  
