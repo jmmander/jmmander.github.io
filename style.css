@@ -302,11 +302,11 @@ canvas {
 
 .imgdiv{
   overflow:hidden;
-  height:12em;
-  width: 16em;
+  height: min(48vw, 15em);
+  width: 65vw;
   background: transparent;
   position: relative;
-  margin-bottom: 8px;
+  margin: 6px auto;
 }
 
 .img-thumbnail:hover, .vid-thumbnail:hover{
@@ -562,11 +562,6 @@ canvas {
    .row {display: block;
    }
 
-   .prof{
-    margin-left: 10%;
-    margin-top:-20%;
-    margin-bottom:-20%;
-   }
    .about h1 {
     padding-bottom: 0;
  }
@@ -575,11 +570,10 @@ canvas {
   padding-top: -2em;
 }
 
+.techHeading {
+   display: none;
+ }
 
-}
-
-
-  
 
 
   #headerPopup{
@@ -594,7 +588,7 @@ canvas {
   
   
   
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 767px) {
     .modal-content {
       max-width: 95%;
     }
@@ -610,6 +604,11 @@ canvas {
       
     }
 
+    .techHeading {
+      display: none;
+    }
+
+
     .profpic {
       margin-left: 0;
       padding-bottom: 5%;
@@ -622,12 +621,6 @@ canvas {
      }
 
      .row {display: block;
-     }
-
-     .prof{
-      margin-left: 10%;
-      margin-top:-20%;
-      margin-bottom:-20%;
      }
      
      .about h1 {
