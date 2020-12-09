@@ -567,9 +567,31 @@ footer {
   padding-bottom: 2em;
 }
 
+.tools {
+  padding-top: 2em;
+}
 .techHeading {
    display: none;
  }
+
+ .text{
+   text-align: center;
+ }
+
+ .cc {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-right: 1em;
+ }
+
+ .contact{
+   padding-top: 1.5em;
+   text-align: center;
+ }
+
+
+ 
 
 
 
