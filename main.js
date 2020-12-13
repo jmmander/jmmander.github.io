@@ -6,6 +6,23 @@ $(document).ready(function(){
     //$('.projects').height($(window).height());
 
 
+$(".lang").on('click', function() {
+  var choice = $(this).attr("id");
+  if (choice == "chinese") {
+    $('.en').addClass('hideLang');
+    $('.ch').removeClass('hideLang');
+    $('.ch').addClass('showLang');
+    $('.en').removeClass('showLang');
+  }
+  if (choice == "english") {
+    $('.ch').addClass('hideLang');
+    $('.en').removeClass('hideLang');
+    $('.en').addClass('showLang');
+    $('.ch').removeClass('showLang');
+  }
+});
+
+
 //selects correct modal image based on user click event
 var modal = document.getElementById('myModal');
 
@@ -30,7 +47,7 @@ $(".img-thumbnail").on("click", function(e) {
 
 //updates projects displayed depending on tag clicked
 $(".filter").on('click', function() {
-  filterTerm = $(this).attr("id");
+  var filterTerm = $(this).attr("id");
   if (!$(this).hasClass("clicked")){
     $(this).addClass("clicked");
     $(".filter").each(function(){
@@ -146,6 +163,7 @@ $('img').each( function() {
 });
 
 
+//$('.progress-bar').waypoint(function() {
 
 
   

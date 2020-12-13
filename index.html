@@ -35,37 +35,49 @@
 		<div class="collapse navbar-collapse" id="main-navigation">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="#about">About</a>
+					<a class="nav-link en showLang" href="#about">About</a>
+					<a class="nav-link ch hideLang" href="#about">关于我</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#projects">Portfolio</a>
+					<a class="nav-link en showLang" href="#projects">Portfolio</a>
+					<a class="nav-link ch hideLang" href="#projects">项目</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#technical">Technical</a>
+					<a class="nav-link en showLang" href="#technical">Technical</a>
+					<a class="nav-link ch hideLang" href="#technical">技能</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#codecontact">Code & Contact</a>
+					<a class="nav-link en showLang" href="#codecontact">Code & Contact</a>
+					<a class="nav-link ch hideLang" href="#codecontact">代码和联系</a>
+				</li>
+				<li class="chooseLanguage">
+					<span class="lang" id="english" >En</span>
+					<span class="lang" id="chinese" >中文</span>
 				</li>
 			</ul>
 		</div>
 	</nav>
 		<div class="description">
-			<h1 id="first" class="landingtext">Jacqueline Mander</h1>
-			<p id="second" class="landingtext">Software Developer</p>
-			<a class="btn btn-outline-secondary btn-lg learnmore landingtext" id="third" href="#about">Learn More</a>
+			<h1 class="landingtext first en showLang">Jacqueline Mander</h1>
+			<h1 class="first landingtext ch hideLang">何美贞</h1>
+			<p class="landingtext second en showLang">Software Developer</p>
+			<p class="landingtext second ch hideLang">软件工程师</p>
+			<a class="btn btn-outline-secondary btn-lg learnmore landingtext third en showLang" href="#about">Learn More</a>
+			<a class="btn btn-outline-secondary btn-lg learnmore landingtext third ch hideLang" href="#about">了解更多</a>
 		</div>
   </header>
   <div class="content">
 	<span class="anchor" id="about"></span>
   <section class="about">
 	  <div class="container"> 
-		<div class='heading'>About</div>
+		<div class='heading en showLang'>About</div>
+		<div class='heading ch hideLang'>关于我</div>
 		  <div class="row introcontainer">
 			<div class="col-lg-6 col-md-6 col-sm-12 profpic"> 
 				<img class="prof" src="./resources/profpic.png" alt="Jacqueline Mander" />
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-12 introtext">
-				<div class='text'>
+			<div class='text en showLang'>
 				<p>Hi there!<br> <br>Welcome to my website! Make yourself at home, click around, check out the source code and see some of my favourite projects.</p>
 				I'm a software engineer with a passion for building software with an injection of fun and creativity. Hailing from the vast shores of Australia, I have been living in the USA since 2019.<br><br>
 				<p>If you want to chat about why Python syntax is the best thing ever or discuss a job opportunity, you can reach me through my <a class="links" href="https://www.linkedin.com/in/jacqueline-m-4452911a4">LinkedIn</a> or just <a class="links" href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer">email me directly</a>! </p>
@@ -73,8 +85,18 @@
 				<a href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target=”_blank” ><i class="icon fab fa-linkedin-in "></i></a>
 				<a href="https://github.com/jmmander" target=”_blank” ><i class=" icon fab fa-github "></i></a>
 				<a href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer"><i class=" icon far fa-envelope"></i></a>
-
 			</div>
+			<div class='text ch hideLang'>
+				<p>哈喽！<br> <br>欢迎光临我的网站！别拘束，点击网页，看看我写的源代码和一些我最喜欢的项目!</p>
+				我是一名充满活力和创造力的软件工程师，我很喜欢写代码。我来自澳洲，在中国生活过两年，2019开始搬到美国定居。<br><br>
+				<p>如果你想知道我为什么喜欢python的句法，或者和我聊聊工作机会，你可以在我的<a class="links" href="https://www.linkedin.com/in/jacqueline-m-4452911a4">LinkedIn上联系我</a>，或者<a class="links" href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer">发电子邮件给我</a>。
+				</p>
+				
+				<a href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target=”_blank” ><i class="icon fab fa-linkedin-in "></i></a>
+				<a href="https://github.com/jmmander" target=”_blank” ><i class=" icon fab fa-github "></i></a>
+				<a href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer"><i class=" icon far fa-envelope"></i></a>
+			</div>
+
 			</div>
 			</div>
 	  </div>
@@ -84,7 +106,8 @@
 	
 	<div class="container features">
 
-	<div class='heading'>Portfolio</div>
+	<div class='heading en showLang'>Portfolio</div>
+	<div class='heading ch hideLang'>项目</div>
 	<div class="tags">
 		<p> <button class="btn filter" id="python" type="button" >Python </button> 
 			<button class="btn filter" id="js" >JavaScript </button>
@@ -136,13 +159,16 @@
 	<span class="anchor" id="technical"></span>
   <section class="technical" >
 	  <div class="container tech" id="tech">
-		<div class='heading'>Technical Expertise</div>
+		<div class='heading en showLang'>Technical Expertise</div>
+		<div class='heading ch hideLang'>技能</div>
 		<div class="row tools">
 			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="frontend techHeading">Frontend</div>
+				<div class="frontend techHeading en showLang">Frontend</div>
+				<div class="frontend techHeading ch hideLang">前台</div>
 			</div>
 			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="techHeading backend">Backend</div>	
+				<div class="techHeading backend en showLang">Backend</div>	
+				<div class="techHeading backend ch hideLang">后台</div>
 			</div>
 			<div class="d-flex col-lg-6 col-md-6 col-sm-12  pbar justify-content-center ">	
 				<div class="progress">
@@ -277,20 +303,26 @@
   <span class="anchor" id="codecontact"></span>
   <section class="codecontact" >
   <div class="container">
-		<div class="heading">Code & Contact</div>
+	<div class="heading en showLang">Code & Contact</div>
+	<div class="heading ch hideLang">代码和联系</div>
+		
 		<div class="row">
 		<div class="col-lg-10 col-md-9 col-sm-12 cc">
-			<div class="text">
-				
-			<p>As a programmer, I am a huge proponent for open-source code and love giving back to the open-source community. 
-				
-			</p><p>As such, you can checkout all the source code for this website on <a class="links" href="https://github.com/jmmander/jmmander.github.io" target=”_blank”>my GitHub here</a>. Should you happen to find some inspiration or come across some useful code snippets, you can always say thanks with an <a class="links" href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target=”_blank” >endorsement on my LinkedIn. </a></p>
+			<div class="text en showLang">
+				<p>As a programmer, I am a huge proponent for open-source code and love giving back to the open-source community. </p>
+				<p>As such, you can checkout all the source code for this website on <a class="links" href="https://github.com/jmmander/jmmander.github.io" target=”_blank”>my GitHub here</a>. Should you happen to find some inspiration or come across some useful code snippets, you can always say thanks with an <a class="links" href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target=”_blank” >endorsement on my LinkedIn. </a></p>
+			</div>
+			<div class="text ch hideLang">
+				<p>我是开放源代码的坚定支持者，如果有机会的话，我一定会向社区开放源代码。 </p>
+				<p>因此，你可以在我的<a class="links" href="https://github.com/jmmander/jmmander.github.io" target=”_blank”>GitHub</a>上看到所有的源代码。
+					如果你从中找到了一些灵感或者看到一些有用的代码，你可以在<a class="links" href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target=”_blank” >我的LinkedIn上跟我说谢谢 </a>，并帮忙背书呀。 </p>
 			</div>
 		</div>
 		<div class="col-lg-2 col-md-3 col-sm-12 contact">
 			 <a class="links" href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target=”_blank” >LinkedIn <i class="fab icon fa-linkedin-in "></i></a><br>
 			 <a class="links" href="https://github.com/jmmander" target=”_blank” >GitHub <i class="fab icon fa-github "></i></a><br>
-			 <a class="links" href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer">Email <i class="far icon fa-envelope"></i></a>
+			 <a class="links en showLang" href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer">Email <i class="far icon fa-envelope"></i></a>
+			 <a class="links ch hideLang" href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer">电子邮件 <i class="far icon fa-envelope"></i></a>
 		</div>
 	</div>
 </div>

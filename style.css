@@ -12,6 +12,8 @@ body {
   color: rgb(255, 255, 255); 
 }
 
+
+
 hr {
   width: 40em;
   color: rgba(132, 148, 140, 0.7);
@@ -67,6 +69,18 @@ canvas {
   font-size: 1.15em;
 }
 
+/*--- language ---*/
+
+.hideLang {
+  display: none !important;
+}
+
+.showLang{
+  display: show;
+}
+
+
+
 /*--- navigation bar ---*/
 
 
@@ -94,13 +108,24 @@ canvas {
   color: rgb(54, 54, 54) !important;
 }
 
-.navbar-toggler {
+.navbar-toggler, .lang {
  color: rgb(54, 54, 54) !important;
 }
 
-.nav-link:hover {
+.lang{
+  font-size: smaller;
+}
+
+.chooseLanguage {
+  margin-left: 5px;
+}
+
+.nav-link:hover, .lang:hover {
   color: black !important; 
-  
+}
+
+.lang:hover {
+  font-weight: bold;
 }
 
 .navbar-collapse {
@@ -190,11 +215,11 @@ canvas {
   to {opacity: 1}
 }
   
-#second {
+.second {
   animation-delay: 1s;
 }
 
-#third {
+.third {
   animation-delay: 2s;
 }
 
