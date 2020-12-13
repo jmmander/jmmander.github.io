@@ -108,11 +108,12 @@ canvas {
   color: rgb(54, 54, 54) !important;
 }
 
-.navbar-toggler, .lang {
+.navbar-toggler {
  color: rgb(54, 54, 54) !important;
 }
 
 .lang{
+  color: rgb(54, 54, 54) !important;
   font-size: smaller;
 }
 
