@@ -117,10 +117,6 @@ canvas {
   font-size: smaller;
 }
 
-.chooseLanguage {
-  margin-left: 5px;
-}
-
 .nav-link:hover, .lang:hover {
   color: black !important; 
 }
