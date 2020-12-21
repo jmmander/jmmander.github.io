@@ -45,6 +45,14 @@ $(".img-thumbnail").on("click", function(e) {
     }
 })
 
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("modal")[0];
+
+// When the user clicks on span, close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
 //updates projects displayed depending on tag clicked
 $(".filter").on('click', function() {
   var filterTerm = $(this).attr("id");
@@ -146,16 +154,9 @@ played = true;
 
 
 //send user a message in console
-console.log("%cHi there! Thanks for checking out my source code. Got questions? Suggestions? Comments? Let me know!", 'color:cyan ; fontsize:30px; line-height: 25px; text-align: center; font-weight: bold')
+console.log("%c　∧＿∧\n（｡･ω･｡)つ━☆・*。\n⊂　　 ノ 　　　・゜+.\nしーＪ　   　　　・゜+.\n　　　     °。+ *´¨\n　　.· ´¸.·*´¨\n   ( .· ´¸.·*´¨) ´¸.·*´¨) ´¸.·*´¨) ¸.·*¨)\n (¸.·´  Welcome to the Console Nebula  ¸.·*¨)\n (¸.·´  We hope you enjoy your journey!  ¸.·*¨)\n (¸.·´  Here you can explore the code base  ¸.·*¨) \n (¸.·´  And inspect all our elements  ¸.·*¨)\n (¸.·´  Thank you for visiting  ¸.·*¨) \n (¸.·´  We hope to see you again! ¸.·*¨) \n (¸.·´ (¸.·’* (¸.·’* ¸.·*¨) ´¸.·*´¨) ´¸.·*´¨)", 'color:cyan ; fontsize:30px; text-align: center; font-weight: bold')
 
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("modal")[0];
-
-// When the user clicks on span, close the modal
-span.onclick = function() { 
-    modal.style.display = "none";
-}
 
 $('img').each( function() {
   var o = $(this);
