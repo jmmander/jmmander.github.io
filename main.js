@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 
 $(".lang").on('click', function() {
-  var choice = $(this).attr("id");
+  let choice = $(this).attr("id");
   if (choice == "chinese") {
     $('.en').addClass('hideLang');
     $('.ch').removeClass('hideLang');
@@ -24,9 +24,9 @@ $(".lang").on('click', function() {
 
 
 //selects correct modal image based on user click event
-var modal = document.getElementById('myModal');
+const modal = document.getElementById('myModal');
 
-$(".img-thumbnail").on("click", function(e) {
+$(".imgthumbnail").on("click", function(e) {
     const imgsrc = $(this).attr("id")
     if (imgsrc.slice(-3) === "png") {
         const caption =  $(this).attr("alt");
@@ -46,7 +46,7 @@ $(".img-thumbnail").on("click", function(e) {
 })
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("modal")[0];
+const span = document.getElementsByClassName("modal")[0];
 
 // When the user clicks on span, close the modal
 span.onclick = function() { 
@@ -55,37 +55,37 @@ span.onclick = function() {
 
 //updates projects displayed depending on tag clicked
 $(".filter").on('click', function() {
-  var filterTerm = $(this).attr("id");
+  let filterTerm = $(this).attr("id");
   if (!$(this).hasClass("clicked")){
     $(this).addClass("clicked");
     $(".filter").each(function(){
       if ($(this).attr("id") === filterTerm) {
-        $(this).css("cssText", " opacity: 0.9")
+        $(this).css("cssText", " opacity: 1")
         console.log("here")
       }
       else{
-        $(this).css("cssText", "opacity: 0.7")
+        $(this).css("cssText", "opacity: 0.6")
       }
     });
     $(".imgdiv").each(function() {
       if (!$(this).hasClass(filterTerm)) {
-        $(this).css("cssText", "display: none !important")
-      }
+          $(this).css("cssText", "display: none !important")
+        }
       else {
-        $(this).css("cssText", "display: show; opacity: 0.9")
+        $(this).css("cssText", "display: show; opacity: 1");
         console.log("here")
       }
     })
   }
-else {
-  $(this).removeClass("clicked");
-  $("#" + filterTerm).css("cssText", "opacity: 0.7");
-  $(".imgdiv").each(function() {
-    if (!$(this).hasClass(filterTerm)) {
-      $(this).css("cssText", "display: show; opacity: 0.9");
-  }}
-)}
-})
+  else {
+    $(this).removeClass("clicked");
+    $("#" + filterTerm).css("cssText", "opacity: 0.6");
+    $(".imgdiv").each(function() {
+      if (!$(this).hasClass(filterTerm)) {
+        $(this).css("cssText", "display: show; opacity: 1");
+    }}
+  )}
+  })
 
 //removes animated class after play
 $(".progress-bar").on("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
@@ -96,7 +96,7 @@ $(".progress-bar").on("webkitAnimationEnd mozAnimationEnd animationEnd", functio
 
 //progress bar plays animation on hover 
 $(".progress-bar").hover(function(){
-  var classes = ($(this).attr("class").split(/\s+/));
+  const classes = ($(this).attr("class").split(/\s+/));
   if (classes.includes('level5'))
 {
   $(this).addClass("animated5");        
@@ -120,7 +120,7 @@ if (classes.includes('level1'))
 );
 
 //progressbar plays on first view
-var played = false;
+let played = false;
 
 $('.progress-bar').waypoint(function() {
 if (!played)
@@ -159,7 +159,7 @@ console.log("%c　∧＿∧\n（｡･ω･｡)つ━☆・*。\n⊂　　 ノ �
 
 
 $('img').each( function() {
-  var o = $(this);
+  let o = $(this);
   if( ! o.attr('title') && o.attr('alt') ) o.attr('title', o.attr('alt') );
 });
 
