@@ -61,6 +61,13 @@ canvas {
   font-size: 1.15em;
 }
 
+[data-aos] {
+  visibility: hidden;
+}
+.aos-animate {
+  visibility: visible;
+}
+
 /*--- language ---*/
 
 .hideLang {
@@ -164,6 +171,7 @@ canvas {
   animation: fadeIn 3s forwards; 
   opacity: 0;
 }
+
 
 .description h1 {
   color: rgb(255, 255, 255);

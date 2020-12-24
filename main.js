@@ -5,6 +5,15 @@ $(document).ready(function(){
     //$('.about').height($(window).height());
     //$('.projects').height($(window).height());
 
+AOS.init({
+  duration: 3000,
+  useClassNames: true,
+  initClassName: false,
+  animatedClassName: 'aos-animate',
+  easing: 'ease',
+  once: true,
+  anchorPlacement: 'center-bottom', 
+  });
 
 $(".lang").on('click', function() {
   let choice = $(this).attr("id");
@@ -153,6 +162,7 @@ played = true;
 
 
 
+
 //send user a message in console
 console.log("%c　∧＿∧\n（｡･ω･｡)つ━☆・*。\n⊂　　 ノ 　　　・゜+.\nしーＪ　   　　　・゜+.\n　　　     °。+ *´¨\n　　.· ´¸.·*´¨\n   ( .· ´¸.·*´¨) ´¸.·*´¨) ´¸.·*´¨) ¸.·*¨)\n (¸.·´  Welcome to the Console Nebula  ¸.·*¨)\n (¸.·´  We hope you enjoy your journey!  ¸.·*¨)\n (¸.·´  Here you can explore the code base  ¸.·*¨) \n (¸.·´  And inspect all our elements  ¸.·*¨)\n (¸.·´  Thank you for visiting  ¸.·*¨) \n (¸.·´  We hope to see you again! ¸.·*¨) \n (¸.·´ (¸.·’* (¸.·’* ¸.·*¨) ´¸.·*´¨) ´¸.·*´¨)", 'color:cyan ; fontsize:30px; text-align: center; font-weight: bold')
 
@@ -164,7 +174,7 @@ $('img').each( function() {
 });
 
 
-//$('.progress-bar').waypoint(function() {
+
 
 
   
