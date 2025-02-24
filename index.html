@@ -1,379 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180414951-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-180414951-1');
-	</script>
-	<script type="text/javascript" src="./resources/warpspeed.min.js"></script>
-
-    <title>Jacqueline Mander</title>
+    <title>Jacqueline Mander - Senior Software Engineer</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Dependencies -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="icon" href="./resources/logo2.png">
-	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script src="https://kit.fontawesome.com/e41db2f2f6.js" crossorigin="anonymous"></script>
-
+    <link rel="icon" href="./resources/logo2.png">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/e41db2f2f6.js" crossorigin="anonymous"></script>
+    <script src="./resources/warpspeed.min.js"></script>
   </head>
 
-<body>
-<canvas id="canvas" style="position:fixed; top:0; left:0; width:100%; height:100%;"></canvas>
-<script>var x=new WarpSpeed("canvas", {"speed":0.8,"speedAdjFactor":0.0,"density":0.5,"shape":"circle","warpEffect":true,"warpEffectLength":6,"depthFade":true,"starSize":4,"backgroundColor":"rgb(2,9,18)","starColor":"#FFFFFF"});</script>
-  <header class="page-header header container-fluid">
-  <div class="overlay"></div>
-	<nav class="navbar navbar-expand-md fixed-top navbar-light" >
-		<span class="chooseLanguage">
-			<span class="lang" id="english" >En</span>
-			<span class="lang" id="chinese" >中文</span>
-		</span>
-      	<h2 class='navbar-title' >JM</h2>
-		<button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#main-navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="main-navigation">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link en showLang" href="#about">About</a>
-					<a class="nav-link ch hideLang" href="#about">关于我</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link en showLang" href="#projects">Portfolio</a>
-					<a class="nav-link ch hideLang" href="#projects">项目</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link en showLang" href="#technical">Technical</a>
-					<a class="nav-link ch hideLang" href="#technical">技能</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link en showLang" href="#codecontact">Code & Contact</a>
-					<a class="nav-link ch hideLang" href="#codecontact">代码及联系</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-		<div class="description">
-			<h1 class="landingtext first en showLang">Jacqueline Mander</h1>
-			<h1 class="first landingtext ch hideLang">何美贞</h1>
-			<p class="landingtext second en showLang">Software Developer</p>
-			<p class="landingtext second ch hideLang">软件工程师</p>
-			<a class="btn btn-outline-secondary btn-lg learnmore landingtext third en showLang" href="#about">Learn More</a>
-			<a class="btn btn-outline-secondary btn-lg learnmore landingtext third ch hideLang" href="#about">了解更多</a>
-		</div>
-  </header>
-  <div class="content">
-	<span class="anchor" id="about"></span>
-  <section class="about" >
-	  <div class="container" data-aos="fade-in"> 
-		<div class='heading en showLang' >About</div>
-		<div class='heading ch hideLang'>关于我</div>
-		  <div class="row introcontainer">
-			<div class="col-lg-6 col-md-6 col-sm-12 profpic"> 
-				<img class="prof" src="./resources/profpic.png" alt="Jacqueline Mander" />
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-12 introtext">
-			<div class='text en showLang'>
-				<p>Hi there!<br> <br> Welcome to my website! Make yourself at home, click around, check out the source code and see some of my favourite projects.</p>
-				My name is Jacqueline Mander. I'm a software engineer with a passion for building software with an injection of fun and creativity. Hailing from the vast shores of Australia, following a brief interlude in China, I have been based in the USA since 2019.<br><br>
-				<p>If you want to chat about why Python syntax is the best thing ever or discuss a job opportunity, you can reach me through my <a class="links" href="https://www.linkedin.com/in/jacqueline-m-4452911a4">LinkedIn</a> or just <a class="links" href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer">email me directly</a>! </p>
-				
-				<a href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target=”_blank” ><i class="icon fab fa-linkedin-in "></i></a>
-				<a href="https://github.com/jmmander" target=”_blank” ><i class=" icon fab fa-github "></i></a>
-				<a href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer"><i class=" icon far fa-envelope"></i></a>
-			</div>
-			<div class='text ch hideLang'>
-				<p>Hello，大家好！<br> <br> 欢迎访问我的网站！我叫何美贞，来自澳洲，是一名充满活力和创造力的软件工程师。我曾经在中国居住过几年，2019年搬到美国定居。</p>
-				<p>写代码一直是我热爱的工作，通过不断的学习和钻研，我用不同的编程语言编写了很多代码及相关项目。请随意浏览我的网页，观看我原创的代码及项目。</p>		
-				<p>如果您想知道我为什么喜欢Python语言，或者您对我的项目感兴趣，并想进一步跟我讨论可能的工作机会，您可以通过<a class="links" href="https://www.linkedin.com/in/jacqueline-m-4452911a4">我的LinkedIn</a>，
-					或者<a class="links" href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer">电子邮箱联系我</a>。期待您的消息！</p>
+  <body>
+    <canvas id="canvas" style="position:fixed; top:0; left:0; width:100%; height:100%;"></canvas>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (typeof WarpSpeed !== "undefined") {
+          new WarpSpeed("canvas", {
+            "speed": 0.8,
+            "speedAdjFactor": 0.0,
+            "density": 0.5,
+            "shape": "circle",
+            "warpEffect": true,
+            "warpEffectLength": 6,
+            "depthFade": true,
+            "starSize": 4,
+            "backgroundColor": "rgb(2,9,18)",
+            "starColor": "#FFFFFF"
+          });
+        }
+      });
+    </script>
 
-				
-				<a href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target=”_blank” ><i class="icon fab fa-linkedin-in "></i></a>
-				<a href="https://github.com/jmmander" target=”_blank” ><i class=" icon fab fa-github "></i></a>
-				<a href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer"><i class=" icon far fa-envelope"></i></a>
-			</div>
+    <header class="page-header header container-fluid">
+      <div class="overlay"></div>
+			<nav class="navbar navbar-expand-md fixed-top navbar-light">
+				<h2 class='navbar-title'>JM</h2>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<li class="nav-item">
+								<a class="nav-link" href="#about">About</a>
+							</li>
+							<a class="nav-link" href="#skills">Skills</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			
+      <div class="description">
+        <h1 class="landingtext first en showLang">Jacqueline Mander</h1>
+        <p class="landingtext second en showLang">Senior Software Engineer | AI & Data Enthusiast</p>
+        <a class="btn btn-outline-secondary btn-lg learnmore landingtext third en showLang" href="#about">Learn More</a>
+      </div>
+    </header>
 
-			</div>
-			</div>
-	  </div>
-  </section >
-  <span class="anchor" id="projects"></span>
-  <section class="projects">
-	
-	<div class="container features" data-aos="fade-in">
+		<div class="content">
+      <span class="anchor" id="about"></span>
+      <section class="about">
+        <div class="container" data-aos="fade-in">
+          <div class='heading en showLang'>About</div>
+          <div class="row introcontainer">
+            <div class="col-lg-6 col-md-6 col-sm-12 profpic">
+              <img class="prof" src="./resources/profpic.png" alt="Jacqueline Mander" />
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 introtext">
+              <div class='text en showLang'>
+                <p>Hi there!<br><br>Welcome to my website! Click around, check out my source code, and explore some of my favorite projects.</p>
+                <p>I'm a <b>Senior Software Engineer</b> with experience in <b>AI-enhanced development, LLM integrations, full-stack engineering, and data-driven automation.</b></p>
+                <p>If you'd like to chat about AI, software development, or potential collaborations, feel free to reach out via <a class="links" href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target="_blank">LinkedIn</a> or <a class="links" href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer">email me directly</a>!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-	<div class='heading en showLang'>Portfolio</div>
-	<div class='heading ch hideLang'>项目</div>
-	<div class="tags">
-		<p> <button class="btn filter" id="python" type="button" >Python </button> 
-			<button class="btn filter" id="js" >JavaScript </button>
-			<button class="btn filter" id="java" >Java </button>
-			<button class="btn filter" id="htmlcss" >HTML/CSS</button>
-			<button class="btn filter" id="angular" >Angular </button>
-			<button class="btn filter" id="react" >React </button>
-			<button class="btn filter" id="django" >Django </button>
-			<button class="btn filter" id="googleappsscript" >Google Apps Script </button>
-		</p>
-	</div>	
-		
-		<div class="row">
-		
-			<div class="d-flex col-lg-4 col-md-4 col-sm-12 imgdiv python htmlcss js react django mix">
-				<div class="inner-pic">
-        		<img src="./resources/grocery.png" class="imgthumbnail" id="./resources/grocery.png" alt="A django backend and react frontend app that allows for easy inventory management with user authentication">
-				</div>
-			</div>
-			<div class="d-flex col-lg-4 col-md-4 col-sm-12 imgdiv js  htmlcss react api mix">
-				<div class="inner-pic">
-				<img src="./resources/jammming.png" class="imgthumbnail" id="./resources/jammming.png" alt="A React powered app that connects to the Spotify API to provide users with a standalone platform to create new playlists and save them to their account.">
-				</div>
-			</div>
-			<div class=" d-flex col-lg-4 col-md-4 col-sm-12 imgdiv js  htmlcss react api mix">
-				<div class="inner-pic">
-				<img src="./resources/ravenous.png" class="imgthumbnail" id="./resources/ravenous.png" alt="A React powered app that connects to the Yelp API that allows users to search for restaurants, sort results by rating, reviews and distance and provides dynamic links to Google Maps and the restaurant webpage ">
-				</div>
-			</div>
-      		<div class="d-flex col-lg-4 col-md-4 col-sm-12 imgdiv js  htmlcss api mix">
-				<div class="inner-pic">
-        		<img src="./resources/wanderlust.png" class="imgthumbnail" id="./resources/wanderlust.png" alt="A travel website that connects to the Open Weather API to provide current weather information and the Foursquare API to provide places of interest information for a given destination">
-				</div>
-			</div>
-			<div class="d-flex col-lg-4 col-md-4 col-sm-12 imgdiv angular js htmlcss mix">
-				<div class="inner-pic">
-				<img src="./resources/todo.png" class="imgthumbnail" id="./resources/todo.png" alt="An Angular powered web application that keeps tracks of a users todo list. Allows inplace editing of todo data and dymanic interface changes">
-				</div>
-			</div>
-			<div class="d-flex col-lg-4 col-md-4 col-sm-12 imgdiv js  htmlcss angular api googleappsscript mix">
-				<div class="inner-pic">
-				<img src="./resources/webform.png" class="imgthumbnail" id="./resources/webform.png" alt="A jQuery and Angular powered smart webform with client and sever side validation, dynamic branching logic based on user response. Webform responses written to a Google Sheet where an email is automatically sent to the submitter. ">
-				</div>
-			</div>
-			<div class=" d-flex col-lg-4 col-md-4 col-sm-12 imgdiv java mix">
-				<div class="inner-pic">
-        		<img src="./resources/shapePlayer.png" class="imgthumbnail" id="./resources/shapePlayer.mp4" alt="A Java powered application that allows users to write and play music using shapes. ">
-				</div>
-			</div>
-      		<div class="d-flex col-lg-4 col-md-4 col-sm-12 imgdiv java api mix">
-				<div class="inner-pic">
-				<img src="./resources/preview.png" class="imgthumbnail" id="./resources/preview.png" alt="A Java powered application that connects to the twitter API and maps a live randomized subset of tweets based on geographical location of users and keyword search. ">
-				</div>
-			</div>
-			<div class=" d-flex col-lg-4 col-md-4 col-sm-12 imgdiv python mix">
-				<div class="inner-pic">
-        		<img src="./resources/dssScan.png" class="imgthumbnail" id="./resources/dssScan.png" alt="An open source Python script run on Linux systems to scan for package dependencies as well as system requirements depending on user inputs prior to the installation of Dataiku Data Science Studio">
-				</div>
-			</div>
-      		
-		</div>
+    <div class="content">
+      <span class="anchor" id="skills"></span>
+      <section class="skills">
+        <div class="container" data-aos="fade-in">
+          <div class='heading en showLang'>Technical Skills</div>
+          <div class="row text-center">
+            <div class="col-lg-12">
+              <h3>Frontend</h3>
+              <span class="badge badge-pill badge-primary">React.js</span>
+              <span class="badge badge-pill badge-primary">Next.js</span>
+              <span class="badge badge-pill badge-primary">TypeScript</span>
+              <span class="badge badge-pill badge-primary">JavaScript</span>
+              <span class="badge badge-pill badge-primary">Tailwind</span>
+              <span class="badge badge-pill badge-primary">Storybook</span>
+              <span class="badge badge-pill badge-primary">Angular</span>
+            </div>
+          </div>
+          <div class="row text-center mt-3">
+            <div class="col-lg-12">
+              <h3>Backend</h3>
+              <span class="badge badge-pill badge-success">Node.js</span>
+              <span class="badge badge-pill badge-success">NestJS</span>
+              <span class="badge badge-pill badge-success">GraphQL</span>
+              <span class="badge badge-pill badge-success">PostgreSQL</span>
+              <span class="badge badge-pill badge-success">Redis</span>
+              <span class="badge badge-pill badge-success">AWS</span>
+              <span class="badge badge-pill badge-success">BullMQ</span>
+              <span class="badge badge-pill badge-success">Ruby on Rails</span>
+              <span class="badge badge-pill badge-success">Solr</span>
+            </div>
+          </div>
+          <div class="row text-center mt-3">
+            <div class="col-lg-12">
+              <h3>AI Development</h3>
+              <span class="badge badge-pill badge-warning">AI-SDK</span>
+              <span class="badge badge-pill badge-warning">LangGraph</span>
+              <span class="badge badge-pill badge-warning">Pinecone</span>
+              <span class="badge badge-pill badge-warning">Amazon Bedrock</span>
+              <span class="badge badge-pill badge-warning">RAG</span>
+            </div>
+          </div>
+          <div class="row text-center mt-3">
+            <div class="col-lg-12">
+              <h3>Infrastructure & Automation</h3>
+              <span class="badge badge-pill badge-info">GitHub Actions</span>
+              <span class="badge badge-pill badge-info">Datadog</span>
+              <span class="badge badge-pill badge-info">Playwright</span>
+              <span class="badge badge-pill badge-info">Cypress</span>
+              <span class="badge badge-pill badge-info">RabbitMQ</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
-		<div id="myModal" class="modal center-block">
-		</div>
-	</div>
-	</section>
-	<span class="anchor" id="technical"></span>
-  <section class="technical" >
-	  <div class="container tech" id="tech" data-aos="fade-in">
-		<div class='heading en showLang'>Technical Expertise</div>
-		<div class='heading ch hideLang'>技能</div>
-		<div class="row tools">
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="frontend techHeading en showLang">Frontend</div>
-				<div class="frontend techHeading ch hideLang">前台</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="techHeading backend en showLang">Backend</div>	
-				<div class="techHeading backend ch hideLang">后台</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12  pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level5" >
-						<span class="progress-value">React</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level5" >
-						<span class="progress-value">Python</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level5" >
-						<span class="progress-value">Typescript/Javascript</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level5" >
-						<span class="progress-value">Ruby</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level5" >
-						<span class="progress-value">Angular</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level5" >
-						<span class="progress-value">NodeJS</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12  pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level5" >
-						<span class="progress-value">HTML/CSS/SCSS</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level4" >
-						<span class="progress-value">NestJS</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level5" >
-						<span class="progress-value">Tailwind/MaterialUI/Styled Components</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level4" >
-						<span class="progress-value">PostgresQL</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level4" >
-						<span class="progress-value">RXJS</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level3" >
-						<span class="progress-value">GraphQL</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12  pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level4" >
-						<span class="progress-value">Jest</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level3" >
-						<span class="progress-value">AWS</span>
-					</div>
-				</div>
-			</div>
+    <!-- JavaScript Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" crossorigin="anonymous"></script>
 
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar  justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level3">
-						<span class="progress-value">Cypress</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level2" >
-						<span class="progress-value">Bash</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12   pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level1">
-						<span class="progress-value">Vue</span>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex col-lg-6 col-md-6 col-sm-12 pbar justify-content-center ">	
-				<div class="progress">
-					<div class="progress-bar level1"  >
-						<span class="progress-value">Express</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>	
-  </section>
-  <span class="anchor" id="codecontact"></span>
-  <section class="codecontact" >
-  <div class="container" data-aos="fade-in">
-	<div class="heading en showLang">Code & Contact</div>
-	<div class="heading ch hideLang">代码及联系方式</div>
-		
-		<div class="row">
-		<div class="col-lg-10 col-md-9 col-sm-12 cc">
-			<div class="text en showLang">
-				<p>As a programmer, I am a huge proponent for open-source code and love giving back to the open-source community. </p>
-				<p>As such, you can checkout all the source code for this website on <a class="links" href="https://github.com/jmmander/jmmander.github.io" target=”_blank”>my GitHub here</a>. Should you happen to find some inspiration or come across some useful code snippets, you can always say thanks with an <a class="links" href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target=”_blank” >endorsement on my LinkedIn. </a></p>
-			</div>
-			<div class="text ch hideLang">
-				<p>作为一名软件工程师，我一直以来都支持代码资源共享，并且想以自己的能力回馈给资源共享的社群。</p>
-				<p>因此，欢迎大家访问该网页<a class="links" href="https://github.com/jmmander/jmmander.github.io" target=”_blank”>我的GitHub</a>来查询可用的代码资源。
-					如果您觉得我的代码能给您带来灵感或者能帮您解决一些问题，请您在<a class="links" href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target=”_blank” >我的LinkedIn</a>上点赞，感谢您的支持!</p>
-			</div>
-		</div>
-		<div class="col-lg-2 col-md-3 col-sm-12 contact">
-			 <a class="links" href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target=”_blank” >LinkedIn <i class="fab icon fa-linkedin-in "></i></a><br>
-			 <a class="links" href="https://github.com/jmmander" target=”_blank” >GitHub <i class="fab icon fa-github "></i></a><br>
-			 <a class="links en showLang" href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer">Email <i class="far icon fa-envelope"></i></a>
-			 <a class="links ch hideLang" href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer">电子邮件 <i class="far icon fa-envelope"></i></a>
-		</div>
-	</div>
-</div>
-</section>
-	<footer class="page-footer">
-		<div class="licence">
-		<p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text">
-			<a rel="cc:attributionURL" class="links" property="dct:title" href="https://jmmander.github.io/">jmmander</a> by <a rel="cc:attributionURL dct:creator" class="links" property="cc:attributionName" href="https://jmmander.github.io/">Jacqueline Mander</a> is licensed under <a rel="license" class="links"  href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /></a></p>
-	</div>
-	</footer>
-</div>
+    <!-- Fix display: show issue -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll(".showLang").forEach(el => el.style.display = "block");
+      });
+    </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="main.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous"></script>
-<!-- Default Statcounter code for my website  -->
-<script type="text/javascript">
-	var sc_project=12409548; 
-	var sc_invisible=1; 
-	var sc_security="2d3b2a29"; 
-	var sc_https=1; 
-	var sc_remove_link=1; 
-	</script>
-	<script type="text/javascript"
-	src="https://www.statcounter.com/counter/counter.js" async></script>
-	<noscript><div class="statcounter"><img class="statcounter"
-	src="https://c.statcounter.com/12409548/0/2d3b2a29/1/" alt="Web
-	Analytics"></div></noscript>
-	<!-- End of Statcounter Code -->
-</body>
+    <!-- StatCounter -->
+    <script type="text/javascript">
+      var sc_project = 12409548; 
+      var sc_invisible = 1; 
+      var sc_security = "2d3b2a29"; 
+      var sc_https = 1; 
+      var sc_remove_link = 1; 
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  </body>
 </html>
