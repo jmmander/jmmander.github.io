@@ -10,157 +10,211 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="./resources/logo2.png">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="cat-background.css">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://kit.fontawesome.com/e41db2f2f6.js" crossorigin="anonymous"></script>
-    <script src="./resources/warpspeed.min.js"></script>
+		<script src="https://kit.fontawesome.com/e41db2f2f6.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <canvas id="canvas" style="position:fixed; top:0; left:0; width:100%; height:100%;"></canvas>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        if (typeof WarpSpeed !== "undefined") {
-          new WarpSpeed("canvas", {
-            "speed": 0.8,
-            "speedAdjFactor": 0.0,
-            "density": 0.5,
-            "shape": "circle",
-            "warpEffect": true,
-            "warpEffectLength": 6,
-            "depthFade": true,
-            "starSize": 4,
-            "backgroundColor": "rgb(2,9,18)",
-            "starColor": "#FFFFFF"
-          });
-        }
-      });
-    </script>
+		<!-- Cat Background -->
+		<div class="cat-background" id="cat-background" style="z-index: 0;"></div>
 
-    <header class="page-header header container-fluid">
-      <div class="overlay"></div>
-			<nav class="navbar navbar-expand-md fixed-top navbar-light">
-				<h2 class='navbar-title'>JM</h2>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-							<li class="nav-item">
-								<a class="nav-link" href="#about">About</a>
-							</li>
-							<a class="nav-link" href="#skills">Skills</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#contact">Contact</a>
-						</li>
-					</ul>
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-md fixed-top">
+			<h2 class='navbar-title'>JM</h2>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#about">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#skills">Skills</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Header Section -->
+		<header class="page-header header container-fluid">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="description">
+					<div class="text-container">
+						<h1 class="landingtext">Jacqueline Mander</h1>
+						<p class="landingtext second">Senior Software Engineer | AI Integration Developer</p>
+					</div>
+					<a class="btn learnmore landingtext third" href="#about">Learn More</a>
 				</div>
-			</nav>
-			
-      <div class="description">
-        <h1 class="landingtext first en showLang">Jacqueline Mander</h1>
-        <p class="landingtext second en showLang">Senior Software Engineer | AI & Data Enthusiast</p>
-        <a class="btn btn-outline-secondary btn-lg learnmore landingtext third en showLang" href="#about">Learn More</a>
-      </div>
+			</div>
     </header>
 
 		<div class="content">
+			<!-- About Section -->
       <span class="anchor" id="about"></span>
       <section class="about">
-        <div class="container" data-aos="fade-in">
-          <div class='heading en showLang'>About</div>
-          <div class="row introcontainer">
-            <div class="col-lg-6 col-md-6 col-sm-12 profpic">
-              <img class="prof" src="./resources/profpic.png" alt="Jacqueline Mander" />
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 introtext">
-              <div class='text en showLang'>
-                <p>Hi there!<br><br>Welcome to my website! Click around, check out my source code, and explore some of my favorite projects.</p>
-                <p>I'm a <b>Senior Software Engineer</b> with experience in <b>AI-enhanced development, LLM integrations, full-stack engineering, and data-driven automation.</b></p>
-                <p>If you'd like to chat about AI, software development, or potential collaborations, feel free to reach out via <a class="links" href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target="_blank">LinkedIn</a> or <a class="links" href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer">email me directly</a>!</p>
+				<div class="container">
+					<div class="text-center">
+						<div class="badge-heading">
+							<h2 class="heading">About</h2>
+						</div>
+					</div>
+					<div class="content-card">
+						<div class="row introcontainer">
+							<div class="col-lg-5 col-md-6 col-sm-12 profpic">
+								<img class="prof" src="./resources/profpic.png" alt="Jacqueline Mander" />
+							</div>
+							<div class="col-lg-7 col-md-6 col-sm-12 introtext">
+								<div class='text'>
+									<p>Hi there, fellow code wanderer! <span class="wave">👋</span></p>
+									<p>Welcome to my little corner of the web. When I'm not busy fighting with AI or explaining to my cat why she
+										can't
+										sleep on my keyboard, I'm building software that makes people's lives easier.</p>
+									<p>I'm a <b>Senior Software Engineer</b> who turns ideas into code and complex requirements into elegant
+										solutions.
+										These days, I'm deep in the world of <b>AI integration</b> — teaching machines to do cool things without
+										accidentally creating Skynet (hopefully).</p>
+									<p>My happy place is where cutting-edge tech meets practical applications. Whether it's crafting responsive
+										interfaces, architecting scalable backends, or convincing AI models to play nicely with legacy systems — I'm
+										your
+										girl!</p>
+									<p>Want to talk shop about the latest models, debate the merits of different architecture patterns, or
+										collaborate
+										on something awesome? Reach out via <a class="links"
+											href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target="_blank">LinkedIn</a> or <a class="links"
+											href="mailto:mander.jacqueline@gmail.com" target="_blank" rel="noopener noreferrer">shoot me an email</a>!
+									</p>
+								</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-    <div class="content">
+			<!-- Skills Section -->
       <span class="anchor" id="skills"></span>
       <section class="skills">
-        <div class="container" data-aos="fade-in">
-          <div class='heading en showLang'>Technical Skills</div>
-          <div class="row text-center">
-            <div class="col-lg-12">
-              <h3>Frontend</h3>
-              <span class="badge badge-pill badge-primary">React.js</span>
-              <span class="badge badge-pill badge-primary">Next.js</span>
-              <span class="badge badge-pill badge-primary">TypeScript</span>
-              <span class="badge badge-pill badge-primary">JavaScript</span>
-              <span class="badge badge-pill badge-primary">Tailwind</span>
-              <span class="badge badge-pill badge-primary">Storybook</span>
-              <span class="badge badge-pill badge-primary">Angular</span>
-            </div>
-          </div>
-          <div class="row text-center mt-3">
-            <div class="col-lg-12">
-              <h3>Backend</h3>
-              <span class="badge badge-pill badge-success">Node.js</span>
-              <span class="badge badge-pill badge-success">NestJS</span>
-              <span class="badge badge-pill badge-success">GraphQL</span>
-              <span class="badge badge-pill badge-success">PostgreSQL</span>
-              <span class="badge badge-pill badge-success">Redis</span>
-              <span class="badge badge-pill badge-success">AWS</span>
-              <span class="badge badge-pill badge-success">BullMQ</span>
-              <span class="badge badge-pill badge-success">Ruby on Rails</span>
-              <span class="badge badge-pill badge-success">Solr</span>
-            </div>
-          </div>
-          <div class="row text-center mt-3">
-            <div class="col-lg-12">
-              <h3>AI Development</h3>
-              <span class="badge badge-pill badge-warning">AI-SDK</span>
-              <span class="badge badge-pill badge-warning">LangGraph</span>
-              <span class="badge badge-pill badge-warning">Pinecone</span>
-              <span class="badge badge-pill badge-warning">Amazon Bedrock</span>
-              <span class="badge badge-pill badge-warning">RAG</span>
-            </div>
-          </div>
-          <div class="row text-center mt-3">
-            <div class="col-lg-12">
-              <h3>Infrastructure & Automation</h3>
-              <span class="badge badge-pill badge-info">GitHub Actions</span>
-              <span class="badge badge-pill badge-info">Datadog</span>
-              <span class="badge badge-pill badge-info">Playwright</span>
-              <span class="badge badge-pill badge-info">Cypress</span>
-              <span class="badge badge-pill badge-info">RabbitMQ</span>
+				<div class="container">
+					<div class="text-center">
+						<div class="badge-heading">
+							<h2 class="heading">Tech Stack</h2>
+						</div>
+					</div>
+					<div class="content-card">
+						<div class="row text-center">
+							<div class="col-lg-12">
+								<h3>Frontend</h3>
+								<span class="badge badge-pill badge-primary">React.js</span>
+								<span class="badge badge-pill badge-primary">Next.js</span>
+								<span class="badge badge-pill badge-primary">TypeScript</span>
+								<span class="badge badge-pill badge-primary">JavaScript</span>
+								<span class="badge badge-pill badge-primary">Tailwind</span>
+								<span class="badge badge-pill badge-primary">Storybook</span>
+								<span class="badge badge-pill badge-primary">Angular</span>
+							</div>
+						</div>
+						<div class="row text-center mt-5">
+							<div class="col-lg-12">
+								<h3>Backend</h3>
+								<span class="badge badge-pill badge-success">Node.js</span>
+								<span class="badge badge-pill badge-success">NestJS</span>
+								<span class="badge badge-pill badge-success">GraphQL</span>
+								<span class="badge badge-pill badge-success">PostgreSQL</span>
+								<span class="badge badge-pill badge-success">Redis</span>
+								<span class="badge badge-pill badge-success">AWS</span>
+								<span class="badge badge-pill badge-success">BullMQ</span>
+								<span class="badge badge-pill badge-success">Ruby on Rails</span>
+								<span class="badge badge-pill badge-success">Solr</span>
+							</div>
+						</div>
+						<div class="row text-center mt-5">
+							<div class="col-lg-12">
+								<h3>AI Development</h3>
+								<span class="badge badge-pill badge-warning">AI-SDK</span>
+								<span class="badge badge-pill badge-warning">LangGraph</span>
+								<span class="badge badge-pill badge-warning">Pinecone</span>
+								<span class="badge badge-pill badge-warning">Amazon Bedrock</span>
+								<span class="badge badge-pill badge-warning">RAG</span>
+							</div>
+						</div>
+						<div class="row text-center mt-5">
+							<div class="col-lg-12">
+								<h3>Infrastructure & Automation</h3>
+								<span class="badge badge-pill badge-info">GitHub Actions</span>
+								<span class="badge badge-pill badge-info">Datadog</span>
+								<span class="badge badge-pill badge-info">Playwright</span>
+								<span class="badge badge-pill badge-info">Cypress</span>
+								<span class="badge badge-pill badge-info">RabbitMQ</span>
+							</div>
             </div>
           </div>
         </div>
       </section>
-    </div>
+
+			<!-- Contact Section -->
+			<span class="anchor" id="contact"></span>
+			<section class="contact-section">
+				<div class="container">
+					<div class="text-center">
+						<div class="badge-heading">
+							<h2 class="heading">Get In Touch</h2>
+						</div>
+					</div>
+					<div class="content-card">
+						<div class="row text-center">
+							<div class="col-md-4 mb-4">
+								<div class="contact-icon">
+									<i class="fas fa-envelope"></i>
+								</div>
+								<h4>Email</h4>
+								<a href="mailto:mander.jacqueline@gmail.com" class="contact-link">mander.jacqueline@gmail.com</a>
+							</div>
+							<div class="col-md-4 mb-4">
+								<div class="contact-icon">
+									<i class="fab fa-linkedin"></i>
+								</div>
+								<h4>LinkedIn</h4>
+								<a href="https://www.linkedin.com/in/jacqueline-m-4452911a4" target="_blank" class="contact-link">Connect with
+									me</a>
+							</div>
+							<div class="col-md-4 mb-4">
+								<div class="contact-icon">
+									<i class="fab fa-github"></i>
+								</div>
+								<h4>GitHub</h4>
+								<a href="https://github.com/" target="_blank" class="contact-link">See my projects</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				</section>
+				</div>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<p>&copy; 2025 Jacqueline Mander | Powered by cats, love, and curiosity <span class="cat-emoji">🐱</span></p>
+					</div>
+				</div>
+			</div>
+		</footer>
 
     <!-- JavaScript Dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="main.js"></script>
+		<script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" crossorigin="anonymous"></script>
-
-    <!-- Fix display: show issue -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        document.querySelectorAll(".showLang").forEach(el => el.style.display = "block");
-      });
-    </script>
-
-    <!-- StatCounter -->
-    <script type="text/javascript">
-      var sc_project = 12409548; 
-      var sc_invisible = 1; 
-      var sc_security = "2d3b2a29"; 
-      var sc_https = 1; 
-      var sc_remove_link = 1; 
-    </script>
-    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+		<script src="cat-background.js"></script>
   </body>
 </html>
