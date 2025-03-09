@@ -524,34 +524,6 @@ section {
   border-radius: 3px;
 }
 
-/* Scroll animation setup */
-.about .content-card,
-.skills .content-card,
-.contact-section .content-card,
-.badge-heading,
-.description {
-  transform-style: preserve-3d;
-  opacity: 0;
-  transform: translate3d(0, 40px, 0);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-/* Scroll animation classes */
-.scroll-animate {
-  animation: scrollReveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-@keyframes scrollReveal {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 40px, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
 
 /* Hover effects for sections (matching badges) */
 .about .content-card:hover,
