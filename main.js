@@ -1,42 +1,4 @@
-// Function to check if element is in viewport
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-// Check and apply scroll animations
-function checkScrollAnimations() {
-  $('.badge-heading, .content-card').each(function() {
-    if (isInViewport($(this)[0]) && !$(this).hasClass('scroll-animate')) {
-      // Add slight delay for each element to create a cascade effect
-      const delay = $(this).index() * 150;
-      const element = $(this);
-      
-      setTimeout(function() {
-        element.addClass('scroll-animate');
-      }, delay);
-    }
-  });
-}
-
-// Initialize scroll animations
-function initScrollAnimations() {
-  // Apply animation to header description immediately on load
-  setTimeout(function() {
-    $('.description').addClass('scroll-animate');
-  }, 500);
-  
-  // Handle scroll animations for other elements
-  $(window).on('scroll', checkScrollAnimations);
-  
-  // Check once on page load
-  checkScrollAnimations();
-}
+// Removed scroll animation functions
 
 $(document).ready(function() {
   // Ensure content is visible
@@ -44,13 +6,10 @@ $(document).ready(function() {
   $('.container').css('z-index', '2');
   $('.content-card').css('z-index', '2');
   
-  // Initialize AOS animations
+  // Initialize AOS animations - keeping disabled
   AOS.init({
-    disable: true // Disable AOS as we're using our own scroll animations
+    disable: true
   });
-
-  // Initialize scroll animations
-  initScrollAnimations();
 
   // Set header height to match window height
   $('.header').height($(window).height());
@@ -87,7 +46,7 @@ $(document).ready(function() {
   });
   
   // Add colorful console message
-  console.log("%c🐱 Welcome to Jacqueline's Purr-fessional Website! 🐱", 
+  console.log("%c🐱 Welcome to the cat nebula! 🐱", 
     'background: linear-gradient(90deg, #FF6B6B, #6B66FF); color: white; font-size: 16px; font-weight: bold; padding: 10px; border-radius: 5px; text-shadow: 1px 1px 2px #333;');
   console.log("%cThanks for exploring! Feel free to check out the code.", 
     'color: #6B66FF; font-size: 14px;');

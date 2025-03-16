@@ -48,6 +48,11 @@ body {
   position: relative;
 }
 
+.quicksilver {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
 /* Section styling as badges */
 section {
   width: 100%;
@@ -78,10 +83,9 @@ section {
   padding: 3em;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   z-index: 2;
   width: 100%;
-    margin: 0 auto;
+  margin: 0 auto;
     box-shadow: none;
 }
 
@@ -107,8 +111,8 @@ section {
 
 .about .content-card::before {
   background: var(--greenShadeC);
-  box-shadow: 0 0 0 2px var(--greenShadeB), 0 var(--badgeShadowSize) 0 0 var(--greenShadeA);
 }
+
 .about .heading,
 .about .text {
   color: var(--greenShadeA);
@@ -122,7 +126,6 @@ section {
 
 .skills .content-card::before {
   background: var(--blueShadeC);
-  box-shadow: 0 0 0 2px var(--blueShadeB), 0 var(--badgeShadowSize) 0 0 var(--blueShadeA);
 }
 
 .skills .heading,
@@ -138,7 +141,6 @@ section {
 
 .contact-section .content-card::before {
   background: var(--purpleShadeC);
-  box-shadow: 0 0 0 2px var(--purpleShadeB), 0 var(--badgeShadowSize) 0 0 var(--purpleShadeA);
 }
 
 .contact-section .heading,
@@ -165,23 +167,9 @@ section {
   border-radius: 30px;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    margin: 0 auto 2em auto;
+  margin: 0 auto 2em auto;
     text-transform: uppercase;
     box-shadow: none;
-}
-
-.badge-heading::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: inherit;
-  transform: translate3d(0, var(--badgeShadowSize), -1em);
-  transition: all 175ms cubic-bezier(0, 0, 1, 1);
-  z-index: -1;
 }
 
 .about .badge-heading {
@@ -192,7 +180,6 @@ section {
 
 .about .badge-heading::before {
   background: var(--greenShadeC);
-  box-shadow: 0 0 0 2px var(--greenShadeB), 0 var(--badgeShadowSize) 0 0 var(--greenShadeA);
 }
 
 .skills .badge-heading {
@@ -203,7 +190,6 @@ section {
 
 .skills .badge-heading::before {
   background: var(--blueShadeC);
-  box-shadow: 0 0 0 2px var(--blueShadeB), 0 var(--badgeShadowSize) 0 0 var(--blueShadeA);
 }
 
 .contact-section .badge-heading {
@@ -214,7 +200,6 @@ section {
 
 .contact-section .badge-heading::before {
   background: var(--purpleShadeC);
-  box-shadow: 0 0 0 2px var(--purpleShadeB), 0 var(--badgeShadowSize) 0 0 var(--purpleShadeA);
 }
 
 /* Link styling */
@@ -301,9 +286,10 @@ section {
   color: var(--textColor) !important;
   cursor: pointer;
   display: inline-block;
-    font-weight: bold;
+  font-weight: bold;
   transition: all 0.3s ease;
   text-decoration: none;
+  font-weight: 700;
 }
 
 .navbar-title {
@@ -313,13 +299,11 @@ section {
   font-weight: 700;
   letter-spacing: 3px;
   position: relative;
-    display: flex;
+  display: flex;
     align-items: center;
   }
   
 .navbar-title::before {
-  content: "🐱";
-  margin-right: 8px;
   font-size: 1.2em;
 }
 
@@ -356,7 +340,7 @@ section {
   height: 100vh;
   display: flex;
   align-items: center;
-    justify-content: center;
+  justify-content: center;
 }
 
 .header .container {
@@ -366,14 +350,6 @@ section {
   align-items: center;
   justify-content: center;
 }
-.overlay {
-  position: absolute;
-  min-height: 100%;
-  min-width: 100%;
-    left: 0;
-    top: 0;
-  background: rgba(0, 0, 0, 0.3);
-}
 
 /* Description (header) styling to match badges */
 .description {
@@ -381,15 +357,14 @@ section {
   text-align: center;
   background-color: var(--pinkShadeE);
   color: var(--pinkShadeA);
-    border: 2px solid var(--pinkShadeA);
+  border: 2px solid var(--pinkShadeA);
     padding: 3em;
   width: 100%;
-    max-width: 1140px;
+  max-width: 1140px;
   font-weight: 300;
   border-radius: 30px;
   transform-style: preserve-3d;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    z-index: 2;
+  z-index: 2;
     box-shadow: none;
   }
   
@@ -402,13 +377,12 @@ section {
   left: 0;
   border-radius: inherit;
   transform: translate3d(0, var(--badgeShadowSize), -1em);
-    transition: all 175ms cubic-bezier(0, 0, 1, 1);
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
     background: var(--pinkShadeC);
-  box-shadow: 0 0 0 2px var(--pinkShadeB), 0 var(--badgeShadowSize) 0 0 var(--pinkShadeA);
-    z-index: -1;
+  z-index: -1;
 }
 
-/* Landing text animations */
+/* Landing text animations - KEEPING THIS FOR "LEARN MORE" BUTTON */
 .landingtext {
   animation: fadeIn 3s forwards;
   opacity: 0;
@@ -435,12 +409,12 @@ section {
   border-radius: 30px;
   border: 2px solid var(--pinkShadeA);
   transition: all 0.3s ease;
-    font-weight: 400;
+  font-weight: 400;
     font-size: max(1vw, 1em);
     padding: 0.8em 2em;
   text-decoration: none;
   display: inline-block;
-    letter-spacing: 2px;
+  letter-spacing: 2px;
 }
 
 .learnmore:hover {
@@ -451,7 +425,7 @@ section {
 @keyframes fadeIn {
   from {
     opacity: 0;
-      transform: translateY(20px);
+    transform: translateY(20px);
     }
   
     to {
@@ -487,7 +461,7 @@ section {
   border-radius: 50%;
   border: 5px solid var(--greenShadeA);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
     filter: grayscale(20%);
   }
 
@@ -522,40 +496,6 @@ section {
   height: 3px;
   background-color: var(--blueShadeA);
   border-radius: 3px;
-}
-
-
-/* Hover effects for sections (matching badges) */
-.about .content-card:hover,
-.skills .content-card:hover,
-.contact-section .content-card:hover,
-.badge-heading:hover,
-.description:hover {
-  transform: translate(0, calc(var(--badgeShadowSize) / 2));
-}
-
-.about .content-card:hover::before,
-.skills .content-card:hover::before,
-.contact-section .content-card:hover::before,
-.badge-heading:hover::before,
-.description:hover::before {
-  transform: translate3d(0, var(--badgeShadowSize), -1em);
-}
-
-.about .content-card:active,
-.skills .content-card:active,
-.contact-section .content-card:active,
-.badge-heading:active,
-.description:active {
-  transform: translate(0, var(--badgeShadowSize));
-}
-
-.about .content-card:active::before,
-.skills .content-card:active::before,
-.contact-section .content-card:active::before,
-.badge-heading:active::before,
-.description:active::before {
-  transform: translate3d(0, 0, -1em);
 }
 
 /* Contact section */
@@ -615,7 +555,7 @@ footer {
 footer p {
   margin: 0;
 }
-/* ORIGINAL BADGE STYLING - DO NOT MODIFY */
+/* Original Badge Styling */
 .badge {
   font-size: 1rem;
   font-weight: 600;
@@ -702,7 +642,6 @@ footer p {
   background: var(--pinkShadeC);
   box-shadow: 0 0 0 2px var(--pinkShadeB), 0 0.75em 0 0 var(--pinkShadeA);
 }
-/* END ORIGINAL BADGE STYLING - DO NOT MODIFY */
 
 /* Wave animation */
 .wave {
@@ -754,7 +693,6 @@ footer p {
 }
 
 @keyframes cat-bounce {
-
   0%,
   100% {
     transform: translateY(0);
@@ -771,6 +709,7 @@ footer p {
     text-align: center;
     max-width: 90%;
     padding: 2em;
+  
   .description h1 {
     font-size: 2em;
   }
@@ -810,6 +749,7 @@ footer p {
   
     .content-card {
       padding: 1.5em;
+  
   section {
     margin-bottom: 4em;
   }
