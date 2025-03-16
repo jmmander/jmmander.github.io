@@ -1,4 +1,4 @@
-// Cat background generator
+// Interactive Cat background generator
 document.addEventListener('DOMContentLoaded', function() {
   // Create a repeating pattern of cats
   const background = document.getElementById('cat-background');
@@ -18,10 +18,30 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   `;
   
+  // Track mouse position
+  let mouseX = 0;
+  let mouseY = 0;
+  
+  // Update mouse position on move
+  document.addEventListener('mousemove', function(e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    updateCats();
+  });
+  
+  // Store all cat elements for easy access
+  let cats = [];
+  
+  // Function to calculate distance between two points
+  function getDistance(x1, y1, x2, y2) {
+    return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+  }
+  
   // Function to calculate how many cats we need
   function createCats() {
-    // Clear existing cats
+    // Clear existing cats and array
     background.innerHTML = '';
+    cats = [];
     
     // Get viewport dimensions
     const viewportWidth = window.innerWidth;
@@ -43,10 +63,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const catElement = cat.firstElementChild;
         
         // Position the cat
-        catElement.style.left = `${x * catWidth * 3}px`;
-        catElement.style.top = `${y * catHeight * 3}px`;
+        const left = x * catWidth * 3;
+        const top = y * catHeight * 3;
+        catElement.style.left = `${left}px`;
+        catElement.style.top = `${top}px`;
         
-        // Add random animation delays
+        // Store cat element and its position
+        cats.push({
+          element: catElement,
+          x: left + (catWidth / 2), // Center point
+          y: top + (catHeight / 2), // Center point
+          eyeLeft: catElement.querySelector('.eye--left'),
+          eyeRight: catElement.querySelector('.eye--right')
+        });
+        
+        // Add random animation delays for default blinking
         const eyeElements = catElement.querySelectorAll('.eye');
         const pupilElements = catElement.querySelectorAll('.eye-pupil');
         
@@ -63,9 +94,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
+  // Function to update cats based on mouse proximity
+  function updateCats() {
+    // Define the proximity radius (3 cat width)
+    const catWidth = 20 * 1.13;
+    const proximityRadius = catWidth * 6;
+    
+    cats.forEach(cat => {
+      // Calculate distance from mouse to cat
+      const distance = getDistance(mouseX, mouseY, cat.x, cat.y);
+      
+      // If mouse is within proximity radius, close eyes
+      if (distance <= proximityRadius) {
+        // Add class to both eyes to override animation
+        cat.eyeLeft.classList.add('eye--closed');
+        cat.eyeRight.classList.add('eye--closed');
+      } else {
+        // Remove class to allow normal animation
+        cat.eyeLeft.classList.remove('eye--closed');
+        cat.eyeRight.classList.remove('eye--closed');
+      }
+    });
+  }
+  
   // Initial creation
   createCats();
   
   // Recreate on resize
-  window.addEventListener('resize', createCats);
+  window.addEventListener('resize', function() {
+    createCats();
+    updateCats(); // Update after recreating
+  });
 });

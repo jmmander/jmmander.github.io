@@ -244,3 +244,10 @@ body {
   transform: translateX(-50%);
   border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
 }
+/* Override for closed eyes when mouse is nearby */
+.eye--closed::after {
+  height: 100% !important;
+  /* Override the animation */
+  animation: none !important;
+  /* Disable the blinking animation */
+}
