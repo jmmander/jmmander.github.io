@@ -6,9 +6,14 @@ $(document).ready(function() {
   $('.container').css('z-index', '2');
   $('.content-card').css('z-index', '2');
   
-  // Initialize AOS animations - keeping disabled
+  // Initialize AOS animations with custom settings
   AOS.init({
-    disable: true
+    disable: false,
+    duration: 800,
+    easing: 'ease-out-cubic',
+    once: false,
+    mirror: true,
+    anchorPlacement: 'top-bottom'
   });
 
   // Set header height to match window height
