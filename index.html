@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS Dependencies -->
+		<style>
+			/* Override default smooth scrolling behavior in the browser */
+			html {
+				scroll-behavior: auto !important;
+			}
+		</style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="./resources/logo2.png">
@@ -33,13 +39,13 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="#about">About</a>
+						<a class="nav-link quicksilver" href="#about">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#skills">Skills</a>
+						<a class="nav-link quicksilver" href="#skills">Tech Stack</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#contact">Contact</a>
+						<a class="nav-link quicksilver" href="#contact">Contact</a>
 					</li>
 				</ul>
 			</div>
@@ -60,8 +66,8 @@
 
 		<div class="content">
 			<!-- About Section -->
-      <span class="anchor" id="about"></span>
       <section class="about">
+				<div id="about" class="anchor"></div>
 				<div class="container">
 					<div class="text-center">
 						<div class="badge-heading" data-aos="fade-down" data-aos-duration="800">
@@ -77,21 +83,16 @@
 							<div class="col-lg-7 col-md-6 col-sm-12 introtext">
 								<div class='text'>
 									<p data-aos="fade-right" data-aos-delay="500">Hi there, fellow code wanderer! <span class="wave">👋</span></p>
-									<p data-aos="fade-right" data-aos-delay="700">Welcome to my little corner of the web. When I'm not busy fighting with AI
-										or explaining to my cat why she
-										can't
-										sleep on my keyboard, I'm building software that makes people's lives easier.</p>
-									<p data-aos="fade-right" data-aos-delay="900">I'm a <b>Senior Software Engineer</b> who turns ideas into code and
+									<p data-aos="fade-right" data-aos-delay="700">I'm a <b>Senior Software Engineer</b> who turns ideas into code and
 										complex requirements into elegant
 										solutions.
-										These days, I'm deep in the world of <b>AI integration</b> — teaching machines to do cool things without
-										accidentally creating Skynet (hopefully).</p>
-									<p data-aos="fade-right" data-aos-delay="1100">My happy place is where cutting-edge tech meets practical applications.
+										These days, I'm deep in the world of <b>AI integration</b> </p>
+										<p data-aos="fade-right" data-aos-delay="900">My happy place is where cutting-edge tech meets practical applications.
 										Whether it's crafting responsive
-										interfaces, architecting scalable backends, or convincing AI models to play nicely with legacy systems — I'm
+										interfaces, architecting scalable backends, or convincing LLMs to actually do as they're told — I'm
 										your
 										girl!</p>
-									<p data-aos="fade-right" data-aos-delay="1300">Want to talk shop about the latest models, debate the merits of different
+									<p data-aos="fade-right" data-aos-delay="1100">Want to talk shop about the latest models, debate the merits of different
 										architecture patterns, or
 										collaborate
 										on something awesome? Reach out via <a class="links"
@@ -106,8 +107,8 @@
       </section>
 
 			<!-- Skills Section -->
-      <span class="anchor" id="skills"></span>
       <section class="skills">
+				<div id="skills" class="anchor"></div>
 				<div class="container">
 					<div class="text-center">
 						<div class="badge-heading" data-aos="fade-down" data-aos-duration="800">
@@ -166,8 +167,8 @@
       </section>
 
 		<!-- Contact Section -->
-		<span class="anchor" id="contact"></span>
 		<section class="contact-section">
+			<div id="contact" class="anchor"></div>
 			<div class="container">
 				<div class="text-center">
 			<div class="badge-heading" data-aos="fade-down" data-aos-duration="800">
@@ -206,8 +207,6 @@
 						</div>
 						</div>
 						</div>
-</section>
-
 				</section>
 				</div>
 

@@ -29,11 +29,10 @@
   --fontPrimary: 'Inter', sans-serif;
   --headerHeight: 3.2em;
   --badgeShadowSize: 1.2em;
-    /* Consistent shadow size for all badges */
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto !important;
 }
 
 body {
@@ -57,18 +56,22 @@ body {
 /* Section styling as badges */
 section {
   width: 100%;
-  padding: 4em 0 6em 0;
+  min-height: 100vh;
+    padding-top: 1.5rem;
   position: relative;
   z-index: 1;
-  margin-bottom: 6em;
-    /* Consistent margin for 3D effect */
+  margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  /* Ensure consistent width for all sections */
-  .container {
-    max-width: 1140px;
-    margin: 0 auto;
-    width: 90%;
+/* Ensure consistent width for all sections */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 5rem 0;
 }
 
 /* Content container */
@@ -89,7 +92,9 @@ section {
   margin: 0 auto;
   box-shadow: none;
   opacity: 1 !important;
-    /* Ensure main element is always fully visible */
+  will-change: transform;
+    min-height: 50px;
+    background-color: inherit;
 }
 
 .content-card::before {
@@ -104,7 +109,6 @@ section {
   transition: all 175ms cubic-bezier(0, 0, 1, 1);
   z-index: -1;
   opacity: 1;
-    /* Ensure consistent opacity for the shadow */
 }
 
 /* Section-specific card styling */
@@ -174,9 +178,11 @@ section {
   transform-style: preserve-3d;
   margin: 0 auto 2em auto;
   text-transform: uppercase;
-    box-shadow: none;
+  box-shadow: none;
   opacity: 1 !important;
-    /* Ensure main element is always fully visible */
+  will-change: transform;
+    min-height: 50px;
+    background-color: inherit;
 }
 
 .about .badge-heading {
@@ -260,12 +266,31 @@ section {
   color: var(--purpleShadeA);
 }
 
-/* Anchor offset for smooth scrolling */
+/* Fix anchor positioning at the top of sections */
 .anchor {
   display: block;
+  position: absolute;
+    top: 0;
   height: var(--headerHeight);
   margin-top: calc(-1 * var(--headerHeight));
   visibility: hidden;
+  pointer-events: none;
+    z-index: -1;
+  }
+  
+  /* Ensure animations don't affect background colors or layout structure */
+  [data-aos] {
+    transition-property: transform;
+    backface-visibility: hidden;
+  }
+  
+  /* AOS Animation Fixes */
+  [data-aos] {
+    pointer-events: none;
+  }
+  
+  [data-aos].aos-animate {
+    pointer-events: auto;
 }
 
 /* Text styling */
@@ -282,6 +307,7 @@ section {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1000;
+
 }
 
 .navbar.scrolled {
@@ -301,7 +327,7 @@ section {
 
 .navbar-title {
   text-align: center;
-  margin-left: 1em;
+  margin-left: 0em;
   margin-bottom: 0;
   font-weight: 700;
   letter-spacing: 3px;
@@ -341,13 +367,72 @@ section {
   border-radius: 0 0 30px 30px;
 }
 
-/* Header section - match width with other sections */
+/* Mobile navbar button styling */
+.navbar-toggler {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  padding: 0.25rem 0.5rem;
+  margin-right: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  position: relative;
+  width: 40px;
+  height: 35px;
+  outline: none !important;
+  cursor: pointer;
+}
+
+/* Create the hamburger icon using spans */
+.navbar-toggler:before,
+.navbar-toggler:after,
+.navbar-toggler-line {
+  content: '';
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar-toggler:before {
+  top: 10px;
+}
+
+.navbar-toggler-line {
+  top: 16px;
+}
+
+.navbar-toggler:after {
+  bottom: 10px;
+}
+
+.navbar-toggler[aria-expanded="true"]:before,
+.navbar-toggler[aria-expanded="true"]:after,
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-line {
+  display: none;
+}
+
+.navbar-toggler[aria-expanded="true"]::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+}
+
+/* Header section styling */
 .header {
   position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 0;
+    padding: 0;
 }
 
 .header .container {
@@ -373,7 +458,7 @@ section {
   transform-style: preserve-3d;
   z-index: 2;
   box-shadow: none;
-  }
+}
   
 .description::before {
   position: absolute;
@@ -389,7 +474,7 @@ section {
   z-index: -1;
 }
 
-/* Landing text animations - KEEPING THIS FOR "LEARN MORE" BUTTON */
+/* Landing text animations */
 .landingtext {
   animation: fadeIn 3s forwards;
   opacity: 0;
@@ -418,7 +503,7 @@ section {
   transition: all 0.3s ease;
   font-weight: 400;
   font-size: max(1vw, 1em);
-    padding: 0.8em 2em;
+  padding: 0.8em 2em;
   text-decoration: none;
   display: inline-block;
   letter-spacing: 2px;
@@ -470,7 +555,7 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   filter: grayscale(20%);
-  }
+}
 
 .prof:hover {
   transform: scale(1.05);
@@ -610,7 +695,7 @@ footer p {
   margin: 0;
 }
 
-/* Original Badge Styling */
+/* Badge Styling */
 .badge {
   font-size: 1rem;
   font-weight: 600;
@@ -623,6 +708,7 @@ footer p {
   transform-style: preserve-3d;
   text-transform: uppercase;
   font-family: inherit;
+  opacity: 1 !important;
 }
 
 .badge::before {
@@ -635,6 +721,8 @@ footer p {
   border-radius: inherit;
   transform: translate3d(0, 0.75em, -1em);
   transition: all 175ms cubic-bezier(0, 0, 1, 1);
+  z-index: -1;
+    opacity: 1;
 }
 
 .badge:hover {
@@ -709,36 +797,36 @@ footer p {
 
 @keyframes wave-animation {
   0% {
-    transform: rotate(0.0deg)
-  }
-
-  10% {
-    transform: rotate(14.0deg)
-  }
-
-  20% {
-    transform: rotate(-8.0deg)
-  }
-
-  30% {
-    transform: rotate(14.0deg)
-  }
-
-  40% {
-    transform: rotate(-4.0deg)
-  }
-
-  50% {
-    transform: rotate(10.0deg)
-  }
-
-  60% {
-    transform: rotate(0.0deg)
-  }
-
-  100% {
-    transform: rotate(0.0deg)
-  }
+      transform: rotate(0.0deg)
+      }
+      
+      10% {
+        transform: rotate(14.0deg)
+      }
+      
+      20% {
+        transform: rotate(-8.0deg)
+      }
+      
+      30% {
+        transform: rotate(14.0deg)
+      }
+      
+      40% {
+        transform: rotate(-4.0deg)
+      }
+      
+      50% {
+        transform: rotate(10.0deg)
+      }
+      
+      60% {
+        transform: rotate(0.0deg)
+      }
+      
+      100% {
+        transform: rotate(0.0deg)
+      }
 }
 
 /* Cat emoji animation */
@@ -749,21 +837,34 @@ footer p {
 
 @keyframes cat-bounce {
   0%,
-  100% {
-    transform: translateY(0);
+    100% {
+        transform: translateY(0);
+      }
+    
+      50% {
+        transform: translateY(-10px);
+      }
+
+/* Mobile Styling */
+@media (max-height: 700px) {
+  section {
+    min-height: 100vh;
   }
 
-  50% {
-    transform: translateY(-10px);
+  .container {
+    padding: 4rem 0;
+  }
+
+  .content-card {
+    padding: 1.5rem;
   }
 }
-
-/* Media Queries */
 @media (max-width: 768px) {
   .description {
     text-align: center;
     max-width: 90%;
     padding: 2em;
+  
   
   .description h1 {
     font-size: 2em;
@@ -774,13 +875,16 @@ footer p {
     letter-spacing: 5px;
   
   
+  
     .introcontainer {
       display: block;
     }
+                
   
     .prof {
     max-width: 60%;
     margin-bottom: 2em;
+    
   
   
     .contact-icon {
@@ -800,10 +904,35 @@ footer p {
     .navbar-collapse {
       width: 100%;
       padding: 1em;
+    background-color: rgba(22, 22, 22, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      margin-top: 5px;
+    }
+    
+    /* Make entire list item clickable */
+    .nav-item {
+      margin: 5px 0;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    
+    .nav-item:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-link {
+      padding: 0.75rem 0;
+      text-align: center;
+      margin-right: 0 !important;
+      display: block;
+      width: 100%;
   }
   
     .content-card {
       padding: 1.5em;
+    
   
   
   section {
