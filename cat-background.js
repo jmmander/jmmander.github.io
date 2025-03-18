@@ -136,12 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     isFirstRender = false;
-    
-    // Debug info - log mouse position
-    if (isFirstRender || isMouseMoving) {
-      console.log(`Mouse position: ${mouseX}, ${mouseY}`);
-      console.log(`Proximity radius: ${proximityRadius}px`);
-    }
+
     
     // Process all cats at once for this simplified logic
     for (let i = 0; i < cats.length; i++) {
@@ -156,20 +151,10 @@ document.addEventListener('DOMContentLoaded', function() {
       // Calculate distance for all visible cats
       cat.distance = getDistance(mouseX, mouseY, cat.x, cat.y);
       
-      // Debug first few cats
-      if (i < 3) {
-        console.log(`Cat ${i} position: ${cat.x}, ${cat.y}, distance: ${cat.distance}`);
-      }
-      
       // Lazy initialize references if needed
       if (!cat.eyeLeft) {
         cat.eyeLeft = cat.element.querySelector('.eye--left');
         cat.eyeRight = cat.element.querySelector('.eye--right');
-        
-        // Debug - make sure we found the eyes
-        if (i < 3) {
-          console.log(`Cat ${i} eye elements found: ${!!cat.eyeLeft}, ${!!cat.eyeRight}`);
-        }
       }
       
       // Based on the distance, close or open eyes
@@ -177,11 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close eyes when mouse is nearby
         cat.eyeLeft.classList.add('eye--closed');
         cat.eyeRight.classList.add('eye--closed');
-        
-        // Debug - log state change
-        if (i < 3) {
-          console.log(`Cat ${i} eyes closed`);
-        }
       } else {
         // Open eyes when mouse is far
         cat.eyeLeft.classList.remove('eye--closed');
