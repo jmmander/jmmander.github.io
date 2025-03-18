@@ -833,83 +833,59 @@ footer p {
 }
 
 @media (max-width: 768px) {
-  .description {
-    text-align: center;
-    max-width: 90%;
-    padding: 2em;
-  
-  
-  .description h1 {
-    font-size: 2em;
-  }
-  
-  .description p {
-    font-size: 1rem;
-    letter-spacing: 5px;
-  
-  
-    .introcontainer {
-      display: block;
-    }
-  
-    .prof {
-    max-width: 60%;
-    margin-bottom: 2em;
-  
-  
-    .contact-icon {
-      font-size: 2em;
-    }
-  
-    .badge {
-      margin: 0.5rem;
-      padding: 0.6rem 1.2rem;
-      font-size: 0.9rem;
-    }
-  
-    .heading {
-      font-size: 2.2em;
-    }
-  
-    .navbar-collapse {
-      width: 100%;
-      padding: 1em;
+  /* Right-align the navbar collapse element */
+  .navbar-collapse {
+    position: absolute;
+    right: 0;
+    top: 100%; /* Position it right below the navbar */
+    width: auto; /* Allow it to size to content */
+    min-width: 200px; /* Give it a reasonable minimum width */
+    padding: 0.8em 0;
     background-color: rgba(22, 22, 22, 0.95);
     backdrop-filter: blur(10px);
-      border-radius: 0 0 15px 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      margin-top: 5px;
-    }
-    
-    /* Make entire list item clickable */
-    .nav-item {
-      margin: 5px 0;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
-    
-    .nav-item:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-    
-    .nav-link {
-      padding: 0.75rem 0;
-      text-align: center;
-      margin-right: 0 !important;
-      display: block;
-      width: 100%;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 0;
+    text-align: left;
   }
   
-    .content-card {
-      padding: 1.5em;
-  
-  
-  section {
-    margin-bottom: 4em;
+  /* Adjust navbar items within the dropdown */
+  .navbar-nav {
+    padding: 0.5rem 0;
   }
   
-    /* Adjust shadow size for small screens */
-    :root {
-      --badgeShadowSize: 0.9em;
-    }
+  .navbar-nav .nav-item {
+    display: block;
+    width: 100%;
+  }
+  
+  .nav-link {
+    padding: 0.75rem 1.5rem; /* Add horizontal padding */
+    text-align: center;
+    margin-right: 0 !important;
+    display: block;
+    width: 100%;
+  }
+  
+  /* Add hover effect */
+  .nav-item {
+    margin: 2px 0;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Make sure the navbar has appropriate positioning */
+  .navbar {
+    padding-left: 15px;
+    padding-right: 15px;
+    position: fixed;
+  }
+  
+  /* Ensure the toggle button is properly aligned */
+  .navbar-toggler {
+    margin-left: auto;
+  }
 }
