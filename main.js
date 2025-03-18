@@ -29,57 +29,71 @@ $(document).ready(function() {
     }, 100);
   });
   
-  // Simplified scrolling function with better anchor targeting
-  $('a[href^="#"]').on('click', function(e) {
-    e.preventDefault();
+// Improve scroll position when clicking navigation links - responsive to viewport height
+// Position the section heading at 1/4 viewport height when navigating
+$('a[href^="#"]').on('click', function(e) {
+  e.preventDefault();
+  
+  var target = this.hash;
+  var $target = $(target);
+  
+  // Stop any ongoing animations immediately
+  $('html, body').stop(true, true);
+  
+  if ($target.length) {
+    // Find the section and its heading
+    var $section = $target.closest('section');
+    var $heading = $section.find('.badge-heading').first();
+    var navHeight = $('.navbar').outerHeight();
     
-    var target = this.hash;
-    var $target = $(target);
+    // Determine if we're on mobile
+    var isMobile = $(window).width() < 768;
     
-    // Stop any ongoing animations immediately
-    $('html, body').stop(true, true);
+    // Calculate the desired position - different for mobile vs desktop
+    var viewportHeight = $(window).height();
+    var targetOffset = isMobile ? viewportHeight * 0.025 : viewportHeight * 0.1; 
     
-    if ($target.length) {
-      // Calculate position to the parent section's top
-      var $section = $target.closest('section');
-      var navHeight = $('.navbar').outerHeight();
-      var targetPosition = $section.offset().top - navHeight;
-      
-      // Temporarily disable other animations
-      $('.content *').css({
-        'animation-play-state': 'paused',
-        'transition': 'none'
-      });
-      
-      // Perform scroll animation
-      $('html, body').animate({
-        'scrollTop': targetPosition
-      }, {
-        duration: 600,  // Faster duration for smoother scrolling
-        easing: 'swing',
-        complete: function() {
-          // Wait a bit before updating URL to ensure animations complete
-          setTimeout(function() {
-            // Update URL hash after animation completes
-            if (history.pushState) {
-              history.pushState(null, null, target);
-            } else {
-              window.location.hash = target;
-            }
-            
-            // Re-enable animations after scroll completes
-            $('.content *').css({
-              'animation-play-state': 'running',
-              'transition': ''
-            });
-            
-            // Refresh AOS after scrolling
-            AOS.refresh();
-          }, 100);
-        }
-      });
-    }
-  });
+    // Calculate the position to scroll to
+    var headingPosition = $heading.length ? $heading.offset().top : $section.offset().top;
+    var targetPosition = headingPosition - navHeight - targetOffset;
+    
+    // Make sure we don't scroll past the top
+    targetPosition = Math.max(0, targetPosition);
+    
+    // Temporarily disable other animations
+    $('.content *').css({
+      'animation-play-state': 'paused',
+      'transition': 'none'
+    });
+    
+    // Perform scroll animation
+    $('html, body').animate({
+      'scrollTop': targetPosition
+    }, {
+      duration: 600,
+      easing: 'swing',
+      complete: function() {
+        setTimeout(function() {
+          // Update URL hash after animation completes
+          if (history.pushState) {
+            history.pushState(null, null, target);
+          } else {
+            window.location.hash = target;
+          }
+          
+          // Re-enable animations after scroll completes
+          $('.content *').css({
+            'animation-play-state': 'running',
+            'transition': ''
+          });
+          
+          // Refresh AOS after scrolling
+          AOS.refresh();
+        }, 100);
+      }
+    });
+  }
+});
   
   // Add title attribute to images for accessibility
   $('img').each(function() {
@@ -122,7 +136,7 @@ $(document).ready(function() {
         var $hash = $(hash);
         if ($hash.length) {
           var navHeight = $('.navbar').outerHeight();
-          var additionalOffset = 50;
+          var additionalOffset = 200;
           var scrollPosition = $hash.offset().top - navHeight - additionalOffset;
           
           // Smooth scroll to the correct position
