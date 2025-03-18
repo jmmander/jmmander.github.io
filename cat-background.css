@@ -1,0 +1,230 @@
+:root {
+  --color-black: #161616;
+  --color-white: #fff;
+  --size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.cat-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Cat */
+.cat {
+  position: absolute;
+  height: var(--size);
+  width: calc(var(--size) * 1.13);
+  z-index: 0;
+  /* Add will-change to optimize rendering */
+    will-change: transform;
+}
+
+/* Ears */
+.ear {
+  position: absolute;
+  top: -30%;
+  height: 45%;
+  width: 35%;
+  background: var(--color-white);
+}
+
+.ear::before,
+.ear::after {
+  content: '';
+  position: absolute;
+  bottom: 24%;
+  height: 10%;
+  width: 5%;
+  border-radius: 50%;
+  background: var(--color-black);
+}
+
+.ear::after {
+  transform-origin: 50% 100%;
+}
+
+.ear--left {
+  left: -7%;
+  border-radius: 70% 30% 0% 0% / 100% 100% 0% 0%;
+  transform: rotate(-15deg);
+}
+
+.ear--left::before,
+.ear--left::after {
+  right: 10%;
+}
+
+.ear--left::after {
+  transform: rotate(-45deg);
+}
+
+.ear--right {
+  right: -7%;
+  border-radius: 30% 70% 0% 0% / 100% 100% 0% 0%;
+  transform: rotate(15deg);
+}
+
+.ear--right::before,
+.ear--right::after {
+  left: 10%;
+}
+
+.ear--right::after {
+  transform: rotate(45deg);
+}
+
+/* Face */
+.face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--color-black);
+  border-radius: 50%;
+}
+
+/* Eyes */
+.eye {
+  position: absolute;
+  top: 35%;
+  height: 31%;
+  width: 31%;
+  background: var(--color-white);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+.eye::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  border-radius: 0 0 50% 50% / 0 0 40% 40%;
+  background: var(--color-black);
+  /* No animation by default */
+}
+
+.eye::before {
+  content: '';
+  position: absolute;
+  top: 60%;
+  height: 10%;
+  width: 15%;
+  background: var(--color-white);
+  border-radius: 50%;
+}
+
+.eye--left {
+  left: 0;
+}
+
+.eye--left::before {
+  right: -5%;
+}
+
+.eye--right {
+  right: 0;
+}
+
+.eye--right::before {
+  left: -5%;
+}
+
+/* Pupils */
+.eye-pupil {
+  position: absolute;
+  top: 25%;
+  height: 50%;
+  width: 30%;
+  background: var(--color-black);
+  border-radius: 50%;
+  /* No animation by default */
+}
+
+/* Static positioning for pupils */
+.eye--left .eye-pupil {
+  right: 30%;
+}
+
+.eye--right .eye-pupil {
+  left: 30%;
+}
+
+.eye-pupil::after {
+  content: '';
+  position: absolute;
+  top: 30%;
+  right: -5%;
+  height: 20%;
+  width: 35%;
+  border-radius: 50%;
+  background: var(--color-white);
+}
+
+/* Muzzle */
+.muzzle {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  height: 8%;
+  width: 10%;
+  background: var(--color-white);
+  transform: translateX(-50%);
+  border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+}
+/* Special classes only applied when mouse is nearby */
+.eye--animated::after {
+  animation: blink 4s infinite ease-in;
+}
+
+/* Close eyes completely when mouse is very close */
+.eye--closed::after {
+  height: 100% !important;
+  animation: none !important;
+}
+
+/* Animations - only applied when needed */
+@keyframes blink {
+  0% {
+    height: 0;
+  }
+
+  80% {
+    height: 0;
+  }
+
+  85% {
+    height: 100%;
+  }
+
+  90% {
+    height: 0;
+  }
+
+  95% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0;
+  }
+}
