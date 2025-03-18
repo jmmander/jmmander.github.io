@@ -57,11 +57,11 @@ body {
 section {
   width: 100%;
   min-height: 100vh;
-    padding-top: 1.5rem;
+  padding-top: 1.5rem;
   position: relative;
   z-index: 1;
   margin-bottom: 0;
-    display: flex;
+  display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -83,43 +83,22 @@ section {
 
 /* Common styling for all content cards */
 .content-card {
-  border-radius: 30px;
-  padding: 3em;
   position: relative;
-  transform-style: preserve-3d;
-  z-index: 2;
+  text-align: center;
+    padding: 3em;
   width: 100%;
+  border-radius: 30px;
+    z-index: 2;
   margin: 0 auto;
-  box-shadow: none;
-  opacity: 1 !important;
-  will-change: transform;
-    min-height: 50px;
-    background-color: inherit;
+  min-height: 50px;
 }
 
-.content-card::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: inherit;
-  transform: translate3d(0, var(--badgeShadowSize), -1em);
-  transition: all 175ms cubic-bezier(0, 0, 1, 1);
-  z-index: -1;
-  opacity: 1;
-}
-
-/* Section-specific card styling */
+/* Section-specific card styling with box-shadow */
 .about .content-card {
   background-color: var(--greenShadeE);
   color: var(--greenShadeA);
   border: 2px solid var(--greenShadeA);
-}
-
-.about .content-card::before {
-  background: var(--greenShadeC);
+  box-shadow: 0 var(--badgeShadowSize) 0 0 var(--greenShadeC);
 }
 
 .about .heading,
@@ -131,10 +110,7 @@ section {
   background-color: var(--blueShadeE);
   color: var(--blueShadeA);
   border: 2px solid var(--blueShadeA);
-}
-
-.skills .content-card::before {
-  background: var(--blueShadeC);
+  box-shadow: 0 var(--badgeShadowSize) 0 0 var(--blueShadeC);
 }
 
 .skills .heading,
@@ -146,10 +122,7 @@ section {
   background-color: var(--purpleShadeE);
   color: var(--purpleShadeA);
   border: 2px solid var(--purpleShadeA);
-}
-
-.contact-section .content-card::before {
-  background: var(--purpleShadeC);
+  box-shadow: 0 var(--badgeShadowSize) 0 0 var(--purpleShadeC);
 }
 
 .contact-section .heading,
@@ -175,24 +148,17 @@ section {
   padding: 0.8rem 1.8rem;
   border-radius: 30px;
   position: relative;
-  transform-style: preserve-3d;
-  margin: 0 auto 2em auto;
+  margin: 0 auto 1em auto;
   text-transform: uppercase;
-  box-shadow: none;
-  opacity: 1 !important;
-  will-change: transform;
-    min-height: 50px;
-    background-color: inherit;
+  min-height: 50px;
+  z-index: 1;
 }
 
+/* Section specific badge heading styling with box-shadow */
 .about .badge-heading {
   background-color: var(--greenShadeE);
   color: var(--greenShadeA);
   border: 2px solid var(--greenShadeA);
-}
-
-.about .badge-heading::before {
-  background: var(--greenShadeC);
 }
 
 .skills .badge-heading {
@@ -201,18 +167,10 @@ section {
   border: 2px solid var(--blueShadeA);
 }
 
-.skills .badge-heading::before {
-  background: var(--blueShadeC);
-}
-
 .contact-section .badge-heading {
   background-color: var(--purpleShadeE);
   color: var(--purpleShadeA);
   border: 2px solid var(--purpleShadeA);
-}
-
-.contact-section .badge-heading::before {
-  background: var(--purpleShadeC);
 }
 
 /* Link styling */
@@ -270,27 +228,27 @@ section {
 .anchor {
   display: block;
   position: absolute;
-    top: 0;
+  top: 0;
   height: var(--headerHeight);
   margin-top: calc(-1 * var(--headerHeight));
   visibility: hidden;
   pointer-events: none;
-    z-index: -1;
+  z-index: -1;
   }
   
-  /* Ensure animations don't affect background colors or layout structure */
-  [data-aos] {
-    transition-property: transform;
-    backface-visibility: hidden;
-  }
+/* Ensure animations don't affect background colors or layout structure */
+[data-aos] {
+  transition-property: transform;
+  backface-visibility: hidden;
+}
   
-  /* AOS Animation Fixes */
-  [data-aos] {
-    pointer-events: none;
-  }
+/* AOS Animation Fixes */
+[data-aos] {
+  pointer-events: none;
+}
   
-  [data-aos].aos-animate {
-    pointer-events: auto;
+[data-aos].aos-animate {
+  pointer-events: auto;
 }
 
 /* Text styling */
@@ -307,7 +265,6 @@ section {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1000;
-
 }
 
 .navbar.scrolled {
@@ -319,22 +276,20 @@ section {
   color: var(--textColor) !important;
   cursor: pointer;
   display: inline-block;
-  font-weight: bold;
+  font-weight: 700;
   transition: all 0.3s ease;
   text-decoration: none;
-  font-weight: 700;
 }
 
 .navbar-title {
   text-align: center;
   margin-left: 0em;
   margin-bottom: 0;
-  font-weight: 700;
   letter-spacing: 3px;
   position: relative;
   display: flex;
   align-items: center;
-  }
+}
   
 .navbar-title::before {
   font-size: 1.2em;
@@ -432,7 +387,7 @@ section {
   align-items: center;
   justify-content: center;
   margin-bottom: 0;
-    padding: 0;
+  padding: 0;
 }
 
 .header .container {
@@ -455,23 +410,8 @@ section {
   max-width: 1140px;
   font-weight: 300;
   border-radius: 30px;
-  transform-style: preserve-3d;
   z-index: 2;
-  box-shadow: none;
-}
-  
-.description::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: inherit;
-  transform: translate3d(0, var(--badgeShadowSize), -1em);
-  transition: all 175ms cubic-bezier(0, 0, 1, 1);
-  background: var(--pinkShadeC);
-  z-index: -1;
+  box-shadow: 0 var(--badgeShadowSize) 0 0 var(--pinkShadeC);
 }
 
 /* Landing text animations */
@@ -514,10 +454,11 @@ section {
   color: white;
 }
 
+/* Optimized fadeIn animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
     }
   
     to {
@@ -722,7 +663,7 @@ footer p {
   transform: translate3d(0, 0.75em, -1em);
   transition: all 175ms cubic-bezier(0, 0, 1, 1);
   z-index: -1;
-    opacity: 1;
+  opacity: 1;
 }
 
 .badge:hover {
@@ -797,38 +738,68 @@ footer p {
 
 @keyframes wave-animation {
   0% {
+    transform: rotate(0.0deg)
+    }
+    
+    10% {
+      transform: rotate(14.0deg)
+    }
+    
+    20% {
+      transform: rotate(-8.0deg)
+    }
+    
+    30% {
+      transform: rotate(14.0deg)
+    }
+    
+    40% {
+      transform: rotate(-4.0deg)
+    }
+    
+    50% {
+      transform: rotate(10.0deg)
+    }
+    
+    60% {
       transform: rotate(0.0deg)
-      }
-      
-      10% {
-        transform: rotate(14.0deg)
-      }
-      
-      20% {
-        transform: rotate(-8.0deg)
-      }
-      
-      30% {
-        transform: rotate(14.0deg)
-      }
-      
-      40% {
-        transform: rotate(-4.0deg)
-      }
-      
-      50% {
-        transform: rotate(10.0deg)
-      }
-      
-      60% {
-        transform: rotate(0.0deg)
-      }
-      
-      100% {
-        transform: rotate(0.0deg)
-      }
+    }
+    
+    100% {
+      transform: rotate(0.0deg)
+    }
 }
 
+.ps-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.ps-container {
+  background-color: rgb(254, 251, 212);
+  border-radius: 12px;
+  padding: 20px;
+  border: 2px solid #fafe92;
+  position: relative;
+  overflow: hidden
+}
+
+.ps-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+  font-family: "Quicksand", cursive;
+}
+
+.ps-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #555;
+  font-family: "Quicksand", cursive;
+  font-weight: 400;
+}
 /* Cat emoji animation */
 .cat-emoji {
   display: inline-block;
@@ -838,12 +809,13 @@ footer p {
 @keyframes cat-bounce {
   0%,
     100% {
-        transform: translateY(0);
-      }
-    
-      50% {
-        transform: translateY(-10px);
-      }
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-10px);
+    }
+}
 
 /* Mobile Styling */
 @media (max-height: 700px) {
@@ -859,6 +831,7 @@ footer p {
     padding: 1.5rem;
   }
 }
+
 @media (max-width: 768px) {
   .description {
     text-align: center;
@@ -875,16 +848,13 @@ footer p {
     letter-spacing: 5px;
   
   
-  
     .introcontainer {
       display: block;
     }
-                
   
     .prof {
     max-width: 60%;
     margin-bottom: 2em;
-    
   
   
     .contact-icon {
@@ -905,7 +875,7 @@ footer p {
       width: 100%;
       padding: 1em;
     background-color: rgba(22, 22, 22, 0.95);
-      backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
       border-radius: 0 0 15px 15px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       margin-top: 5px;
@@ -932,7 +902,6 @@ footer p {
   
     .content-card {
       padding: 1.5em;
-    
   
   
   section {

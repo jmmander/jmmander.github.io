@@ -34,6 +34,8 @@ body {
   height: var(--size);
   width: calc(var(--size) * 1.13);
   z-index: 0;
+  /* Add will-change to optimize rendering */
+    will-change: transform;
 }
 
 /* Ears */
@@ -118,33 +120,7 @@ body {
   width: 100%;
   border-radius: 0 0 50% 50% / 0 0 40% 40%;
   background: var(--color-black);
-  animation: blink 4s infinite ease-in;
-}
-
-@keyframes blink {
-  0% {
-    height: 0;
-  }
-
-  90% {
-    height: 0;
-  }
-
-  92.5% {
-    height: 100%;
-  }
-
-  95% {
-    height: 0;
-  }
-
-  97.5% {
-    height: 100%;
-  }
-
-  100% {
-    height: 0;
-  }
+  /* No animation by default */
 }
 
 .eye::before {
@@ -181,39 +157,10 @@ body {
   width: 30%;
   background: var(--color-black);
   border-radius: 50%;
-  animation: look-around 4s infinite;
+  /* No animation by default */
 }
 
-@keyframes look-around {
-  0% {
-    transform: translate(0)
-  }
-
-  5% {
-    transform: translate(50%, -25%)
-  }
-
-  10% {
-    transform: translate(50%, -25%)
-  }
-
-  15% {
-    transform: translate(-100%, -25%)
-  }
-
-  20% {
-    transform: translate(-100%, -25%)
-  }
-
-  25% {
-    transform: translate(0, 0)
-  }
-
-  100% {
-    transform: translate(0, 0)
-  }
-}
-
+/* Static positioning for pupils */
 .eye--left .eye-pupil {
   right: 30%;
 }
@@ -244,10 +191,40 @@ body {
   transform: translateX(-50%);
   border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
 }
-/* Override for closed eyes when mouse is nearby */
+/* Special classes only applied when mouse is nearby */
+.eye--animated::after {
+  animation: blink 4s infinite ease-in;
+}
+
+/* Close eyes completely when mouse is very close */
 .eye--closed::after {
   height: 100% !important;
-  /* Override the animation */
   animation: none !important;
-  /* Disable the blinking animation */
+}
+
+/* Animations - only applied when needed */
+@keyframes blink {
+  0% {
+    height: 0;
+  }
+
+  80% {
+    height: 0;
+  }
+
+  85% {
+    height: 100%;
+  }
+
+  90% {
+    height: 0;
+  }
+
+  95% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0;
+  }
 }

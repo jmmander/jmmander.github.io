@@ -8,7 +8,7 @@
   
   // Colors for different badge types
   const badgeColors = {
-    'badge-primary': 'rgb(106, 163, 137)', // greenShadeA
+    'badge-primary': 'rgb(106, 163, 137)', // greenShadeA 
     'badge-success': 'rgb(89, 146, 187)',  // blueShadeA
     'badge-warning': 'rgb(121, 89, 187)',  // purpleShadeA
     'badge-info': 'rgb(187, 89, 146)'      // pinkShadeA
@@ -16,21 +16,27 @@
   
   // Function to create hearts animation
   function createHearts(event) {
-    // Get badge element and position
-    const badge = event.currentTarget;
-    const rect = badge.getBoundingClientRect();
-    const badgeCenterX = rect.left + rect.width / 2;
-    const badgeCenterY = rect.top + rect.height / 2;
+    // Use actual click coordinates
+    const clickX = event.clientX || event.touches?.[0]?.clientX || 0;
+    const clickY = event.clientY || event.touches?.[0]?.clientY || 0;
     
-    // Get color from badge class
+    // Get badge element - we need to find the parent badge from the overlay
+    const overlay = event.currentTarget;
+    const badge = overlay.parentElement;
+    
+    // Get badge color
     let heartColor = 'rgb(240, 168, 209)'; // Default color (pinkShadeC)
     
-    // Determine which badge type was clicked
-    Object.keys(badgeColors).forEach(className => {
-      if (badge.classList.contains(className)) {
-        heartColor = badgeColors[className];
-      }
-    });
+    // Check each badge class and assign correct color
+    if (badge.classList.contains('badge-primary')) {
+      heartColor = badgeColors['badge-primary'];
+    } else if (badge.classList.contains('badge-success')) {
+      heartColor = badgeColors['badge-success'];
+    } else if (badge.classList.contains('badge-warning')) {
+      heartColor = badgeColors['badge-warning'];
+    } else if (badge.classList.contains('badge-info')) {
+      heartColor = badgeColors['badge-info'];
+    }
     
     // Clear any existing hearts
     heartElements.forEach(heart => {
@@ -46,9 +52,9 @@
       const angle = (i * (2 * Math.PI / 6));
       const distance = 80; // Fixed distance for an even circle
       
-      // Calculate end positions
-      const endX = badgeCenterX + Math.cos(angle) * distance;
-      const endY = badgeCenterY + Math.sin(angle) * distance;
+      // Calculate end positions from click point
+      const endX = clickX + Math.cos(angle) * distance;
+      const endY = clickY + Math.sin(angle) * distance;
       
       // Create heart element
       const heart = document.createElement('div');
@@ -58,7 +64,7 @@
       heart.style.pointerEvents = 'none';
       heart.style.top = '0';
       heart.style.left = '0';
-      heart.style.transform = `translate(${badgeCenterX}px, ${badgeCenterY}px) scale(0)`;
+      heart.style.transform = `translate(${clickX}px, ${clickY}px) scale(0)`;
       heart.style.opacity = '1';
       
       // Set animation properties
@@ -93,7 +99,6 @@
   function initBadgeHandlers() {
     // Get all badges
     const badges = document.querySelectorAll('.badge');
-    console.log('Found', badges.length, 'badges');
     
     // Add handlers to each badge
     badges.forEach(badge => {
@@ -104,14 +109,21 @@
         badge.style.position = 'relative';
         badge.style.cursor = 'pointer';
         
+        // Remove any existing overlay
+        const existingOverlay = badge.querySelector('.heart-overlay');
+        if (existingOverlay) {
+          badge.removeChild(existingOverlay);
+        }
+        
         // Create an overlay to capture clicks on the entire badge area
         const overlay = document.createElement('div');
+        overlay.className = 'heart-overlay';
         overlay.style.position = 'absolute';
         overlay.style.top = '0';
         overlay.style.left = '0';
         overlay.style.width = '100%';
         overlay.style.height = '100%';
-        overlay.style.zIndex = '10'; // High enough to be on top but below other important elements
+        overlay.style.zIndex = '10'; 
         overlay.style.cursor = 'pointer';
         
         // Add the overlay to the badge
@@ -121,17 +133,13 @@
         overlay.addEventListener('click', function(e) {
           e.preventDefault();
           e.stopPropagation();
-          // Pass the parent badge as the currentTarget
-          const syntheticEvent = { currentTarget: badge };
-          createHearts(syntheticEvent);
+          createHearts(e);
         });
         
         overlay.addEventListener('touchend', function(e) {
           e.preventDefault();
           e.stopPropagation();
-          // Pass the parent badge as the currentTarget
-          const syntheticEvent = { currentTarget: badge };
-          createHearts(syntheticEvent);
+          createHearts(e);
         });
       }
     });
