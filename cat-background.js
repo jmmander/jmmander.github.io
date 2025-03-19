@@ -2,7 +2,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Performance optimization flags
   const isLowEndDevice = window.navigator.hardwareConcurrency <= 4;
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  const isMobile = (('ontouchstart' in window) ||
+  (navigator.maxTouchPoints > 0) ||
+  (navigator.msMaxTouchPoints > 0)) ||/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   
   // Create background element reference
   const background = document.getElementById('cat-background');
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Constants to avoid recalculation
   const catWidth = 20 * 1.13; // Based on CSS variables
   const catHeight = 20;
-  const proximityRadius = catWidth * 7; // Significantly increased proximity radius for easier testing
+  const proximityRadius = isMobile ? catWidth : catWidth * 7; // Significantly increased proximity radius for easier testing
   
   // Update mouse position on move with throttling
   document.addEventListener('mousemove', function(e) {
