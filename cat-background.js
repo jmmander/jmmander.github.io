@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Performance optimization flags
   const isLowEndDevice = window.navigator.hardwareConcurrency <= 4;
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   
   // Create background element reference
   const background = document.getElementById('cat-background');
@@ -75,6 +76,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
     
+    // Get header height - using the navbar height value from CSS
+    // The header height is defined as 3.2em in the :root CSS variables
+    const headerElement = document.querySelector('.navbar');
+    const headerHeight = headerElement ? headerElement.offsetHeight : 51; // Default to 51px if not found
+    
     // Calculate spacing based on device capability and screen size
     let baseSpacing = 3; // Default spacing multiplier
     if (isLowEndDevice) {
@@ -85,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Calculate number of cats that will fit with the base spacing
     let horizontalCats = Math.floor(viewportWidth / (catWidth * baseSpacing));
-    let verticalCats = Math.floor(viewportHeight / (catHeight * baseSpacing));
+    let verticalCats = Math.floor((viewportHeight - headerHeight) / (catHeight * baseSpacing));
     
     // Ensure at least a minimum number of cats
     horizontalCats = Math.max(horizontalCats, 3);
@@ -93,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Calculate actual spacing to evenly distribute cats
     const horizontalSpacing = viewportWidth / horizontalCats;
-    const verticalSpacing = viewportHeight / verticalCats;
+    const verticalSpacing = (viewportHeight - headerHeight) / verticalCats;
     
     // Create a document fragment for better performance
     const fragment = document.createDocumentFragment();
@@ -108,7 +114,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Position in a perfect grid with even spacing
         // Subtract half a cat width/height to center the grid
         const left = (x * horizontalSpacing) + (horizontalSpacing / 2) - (catWidth / 2);
-        const top = (y * verticalSpacing) + (verticalSpacing / 2) - (catHeight / 2);
+        // Add header height to push all cats below the header
+        const top = headerHeight + (y * verticalSpacing) + (verticalSpacing / 2) - (catHeight / 2);
         
         catElement.style.left = `${left}px`;
         catElement.style.top = `${top}px`;
