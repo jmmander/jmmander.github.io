@@ -1,4 +1,4 @@
-// Heart Confetti Animation for Badges
+// Heart Confetti Animation for Badges - Fixed for Mobile
 (function() {
   // Store created hearts to clean them up
   let heartElements = [];
@@ -16,9 +16,27 @@
   
   // Function to create hearts animation
   function createHearts(event) {
-    // Use actual click coordinates
-    const clickX = event.clientX || event.touches?.[0]?.clientX || 0;
-    const clickY = event.clientY || event.touches?.[0]?.clientY || 0;
+    // Get correct coordinates based on event type
+    let clickX, clickY;
+
+    // For touchend events, we need to handle differently than mouse clicks
+    if (event.type === 'touchend') {
+      // Use the last recorded touch position
+      const touch = event.changedTouches[0];
+      if (touch) {
+        clickX = touch.clientX;
+        clickY = touch.clientY;
+      } else {
+        // Fallback if no touch data available
+        const rect = event.currentTarget.getBoundingClientRect();
+        clickX = rect.left + rect.width / 2;
+        clickY = rect.top + rect.height / 2;
+      }
+    } else {
+      // Regular mouse click
+      clickX = event.clientX;
+      clickY = event.clientY;
+    }
     
     // Get badge element - we need to find the parent badge from the overlay
     const overlay = event.currentTarget;
