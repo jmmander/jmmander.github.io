@@ -1,8 +1,7 @@
-// Optimized Cat background generator
+// Optimized Cat background generator with perfect grid
 document.addEventListener('DOMContentLoaded', function() {
   // Performance optimization flags
   const isLowEndDevice = window.navigator.hardwareConcurrency <= 4;
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   
   // Create background element reference
   const background = document.getElementById('cat-background');
@@ -76,31 +75,41 @@ document.addEventListener('DOMContentLoaded', function() {
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
     
-    // Calculate number of cats with adaptive density based on device capability
-    let spacing = 3; // Default spacing
-    if (isLowEndDevice || isMobile) {
-      spacing = 5; // Much sparser grid on low-end devices
+    // Calculate spacing based on device capability and screen size
+    let baseSpacing = 3; // Default spacing multiplier
+    if (isLowEndDevice) {
+      baseSpacing = 5; // Sparser grid on low-end devices
     } else if (viewportWidth * viewportHeight > 1920 * 1080) {
-      spacing = 4; // Slightly sparser grid on high-res displays
+      baseSpacing = 4; // Slightly sparser grid on high-res displays
     }
     
-    // Calculate grid dimensions
-    const horizontalCats = Math.ceil(viewportWidth / (catWidth * spacing)) + 1;
-    const verticalCats = Math.ceil(viewportHeight / (catHeight * spacing)) + 1;
+    // Calculate number of cats that will fit with the base spacing
+    let horizontalCats = Math.floor(viewportWidth / (catWidth * baseSpacing));
+    let verticalCats = Math.floor(viewportHeight / (catHeight * baseSpacing));
+    
+    // Ensure at least a minimum number of cats
+    horizontalCats = Math.max(horizontalCats, 3);
+    verticalCats = Math.max(verticalCats, 3);
+    
+    // Calculate actual spacing to evenly distribute cats
+    const horizontalSpacing = viewportWidth / horizontalCats;
+    const verticalSpacing = viewportHeight / verticalCats;
     
     // Create a document fragment for better performance
     const fragment = document.createDocumentFragment();
     
-    // Create cats with improved positioning
+    // Create cats with perfectly even spacing
     for (let y = 0; y < verticalCats; y++) {
       for (let x = 0; x < horizontalCats; x++) {
         const cat = document.createElement('div');
         cat.innerHTML = catTemplate;
         const catElement = cat.firstElementChild;
         
-        // Position with slight randomness to break the grid pattern
-        const left = (x * catWidth * spacing) + (Math.random() * 10 - 5);
-        const top = (y * catHeight * spacing) + (Math.random() * 10 - 5);
+        // Position in a perfect grid with even spacing
+        // Subtract half a cat width/height to center the grid
+        const left = (x * horizontalSpacing) + (horizontalSpacing / 2) - (catWidth / 2);
+        const top = (y * verticalSpacing) + (verticalSpacing / 2) - (catHeight / 2);
+        
         catElement.style.left = `${left}px`;
         catElement.style.top = `${top}px`;
         
