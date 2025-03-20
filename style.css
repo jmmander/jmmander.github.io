@@ -661,13 +661,11 @@ section {
 
 /* Footer styling */
 footer {
-  background-color: rgba(22, 22, 22, 0.9);
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.902);
   padding: 2em 0;
   font-weight: 300;
   font-size: 0.9em;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 footer p {
@@ -943,8 +941,8 @@ footer p {
     right: 0;
     top: 100%; /* Position it right below the navbar */
     width: auto; /* Allow it to size to content */
-    min-width: 200px; /* Give it a reasonable minimum width */
-    padding: 0.8em 0;
+    min-width: 200px;
+      /* Give it a reasonable minimum width */
     background-color: rgba(22, 22, 22, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 0 0 15px 15px;
